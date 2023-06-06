@@ -1,21 +1,22 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable no-lone-blocks */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 // import Header from "../../Components/Header";
-import { Formik, Form, Field } from "formik";
-import * as Yup from "yup";
+import { Formik, Form, Field } from 'formik';
+import * as Yup from 'yup';
 // import Footer from "../../Components/Footer";
-import axios from "axios";
+import axios from 'axios';
 // import BaseURL from "../../BaseUrl/BaseURL";
-import { ThreeDots } from "react-loader-spinner";
+import { ThreeDots } from 'react-loader-spinner';
 
-import'./style.css';
-import Swal from "sweetalert2";
-
+import './style.css';
+import Swal from 'sweetalert2';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const FormComponent = () => {
-  const user_id = localStorage.getItem("user_id");
-  const userToken = localStorage.getItem("userToken");
+  const history = useHistory();
+  const user_id = localStorage.getItem('user_id');
+  const userToken = localStorage.getItem('userToken');
 
   const [isFixed, setIsFixed] = useState(false);
   const [checkboxes, setCheckboxes] = useState([]);
@@ -26,34 +27,37 @@ const FormComponent = () => {
   const [notifyAttorney, setNotifyAttorney] = useState();
   const [attorneyEmail, seAttorneyEmail] = useState();
   const [CheckboxValue, setCheckboxValue] = useState([]);
+  const [optionalID, setOptionalID] = useState([]);
   const [phoneService, setPhoneService] = useState(false);
   const [trademarkService, setTrademarkService] = useState(false);
   const [ourTaxAddressType, setOurTaxAddressType] = useState(0);
-  const [OurTaxAddressValue, setOurTaxAddressValue] = useState("");
+  const [OurTaxAddressValue, setOurTaxAddressValue] = useState('');
+  const [business, setBusiness] = useState([]);
+  const [mail, setMail] = useState([]);
   const [Option, setOption] = useState([]);
+  const [subOption, setSubOption] = useState([]);
 
   const SignupSchema = Yup.object().shape({
-    email: Yup.string().email("Invalid email").required(),
+    email: Yup.string().email('Invalid email').required(),
     password: Yup.string()
-      .required("Required")
-      .min(8, "Password is too short - should be 8 chars minimum."),
+      .required('Required')
+      .min(8, 'Password is too short - should be 8 chars minimum.'),
     password_confirmation: Yup.string()
-      .required("Required")
-      .oneOf([Yup.ref("password"), null], "Must be same your password"),
-    fname: Yup.string().required("enter your first name"),
-    lname: Yup.string().required("enter your last name"),
-    phone: Yup.string().required("enter your phone number"),
-    sec_phone: Yup.string().required("enter your secondary phone number"),
-    fax: Yup.string().required("enter your fax number"),
-    address: Yup.string().required("enter your complete address"),
-    city: Yup.string().required("enter your city name"),
-    state: Yup.string().required("enter your state"),
-    postal: Yup.string().required("enter your area postal code"),
+      .required('Required')
+      .oneOf([Yup.ref('password'), null], 'Must be same your password'),
+    fname: Yup.string().required('enter your first name'),
+    lname: Yup.string().required('enter your last name'),
+    phone: Yup.string().required('enter your phone number'),
+    sec_phone: Yup.string().required('enter your secondary phone number'),
+    fax: Yup.string().required('enter your fax number'),
+    address: Yup.string().required('enter your complete address'),
+    city: Yup.string().required('enter your city name'),
+    state: Yup.string().required('enter your state'),
+    postal: Yup.string().required('enter your area postal code'),
   });
 
-
   useEffect(() => {
-    getOptiondata();
+    getBusinessMail();
     // var doc = document.documentElement;
     // const navBar = document.getElementById('topnav');
     // console.log(navBar,"navbar")
@@ -68,17 +72,20 @@ const FormComponent = () => {
     //     document.querySelector('.settingbtn').classList.add('btn-soft-primary');
     //   }
     // }
-  }, [])
-
+  }, []);
+  console.log(checkboxes, '--------------------', CheckboxValue);
   const handleCheckboxChange = (event) => {
+    console.log(event);
     setCheckboxValue(event.target.value);
-    const { name, checked, value } = event.target;
+    const { name, checked, value, id } = event.target;
     if (checked) {
       // Add the checkbox value to the array
       setCheckboxes([...checkboxes, name]);
+      setOptionalID([...optionalID, id]);
     } else {
       // Remove the checkbox value from the array
       setCheckboxes(checkboxes.filter((checkbox) => checkbox !== name));
+      setOptionalID(optionalID.filter((check) => check !== id));
     }
     if (checked) {
       // Add the checkbox value to the array
@@ -88,18 +95,170 @@ const FormComponent = () => {
       setCheckboxValue(CheckboxValue.filter((V) => V !== value));
     }
   };
-
   const total = CheckboxValue.reduce(
     (previous, current) => previous + current,
     0
   );
-  console.log(CheckboxValue, total, "=========>");
 
-  const getOptiondata = () => {
+  const getBusinessMail = async () =>{
+    {
+      try {
+        const response = await axios.get(
+          'http://businessagentapi.dev-sh.xyz/api/business-mail',
+        );
+        const response1 = await axios.get(
+          'http://businessagentapi.dev-sh.xyz/api/business-entity-type',
+        );
+        setMail(response.data.data);
+        setBusiness(response1.data.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+  }
+
+  const handleOrder = async (userId, usertoken) => {
+    setLoader(true);
+    try {
+      const formData = new FormData();
+      formData.append('user_id', userId);
+      formData.append('des_comp_name', companyName);
+      formData.append('business_entity_type_id', businessType);
+      formData.append('noti_attorney_lawsuit', notifyAttorney);
+      formData.append('attorney_email', attorneyEmail);
+      formData.append('business_mail_delivered', taxAddress);
+      {
+        optionalID?.map((e, i) => {
+          return formData.append(`optional_product_id[${i}]`, +e);
+        });
+      }
+      {
+        taxAddress === 'Our Texas Address' &&
+          formData.append('business_mail_id', ourTaxAddressType);
+      }
+      {
+        attorneyEmail === 1 && formData.append('attorney_email', attorneyEmail);
+      }
+
+      var config = {
+        method: 'post',
+        url: `http://businessagentapi.dev-sh.xyz/api/orders`,
+        data: formData,
+        headers: {
+          Accept: 'application/json',
+          Authorization: `Bearer ${usertoken}`,
+        },
+      };
+      await axios(config)
+        .then((response) => {
+          console.log('after order--->', response);
+          console.log('after order--->', response.data.status);
+          setLoader(false);
+          if (response?.data?.status === true) {
+            Swal.fire({
+              toast: true,
+              icon: 'success',
+              title: response?.data?.message,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer);
+                toast.addEventListener('mouseleave', Swal.resumeTimer);
+              },
+            });
+          }
+        })
+        .catch((e) => {
+          console.log(e);
+          setLoader(false);
+          Swal.fire({
+            toast: true,
+            icon: 'error',
+            title: 'SomeThing Went Wrong',
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer);
+              toast.addEventListener('mouseleave', Swal.resumeTimer);
+            },
+          });
+        });
+    } catch (e) {
+      setLoader(false);
+      console.log(e.message);
+      Swal.fire({
+        toast: true,
+        icon: 'error',
+        title: e.response?.data?.data?.message,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer);
+          toast.addEventListener('mouseleave', Swal.resumeTimer);
+        },
+      });
+    }
+  };
+
+  const handleSignup = async (v) => {
+    try {
+      const formData = new FormData();
+      formData.append('email', v?.email);
+      formData.append('password', v?.password);
+      formData.append('password_confirmation', v?.password_confirmation);
+      formData.append('fname', v?.fname);
+      formData.append('lname', v?.lname);
+      formData.append('phone', v?.phone);
+      formData.append('sec-phone', v?.sec_phone);
+      formData.append('fax', v?.fax);
+      formData.append('address', v?.address);
+      formData.append('city', v?.city);
+      formData.append('state', v?.state);
+      formData.append('postal', v?.postal);
+
+      var config = {
+        method: 'post',
+        url: `http://businessagentapi.dev-sh.xyz/api/signup`,
+        data: formData,
+        headers: {
+          Accept: 'application/json',
+        },
+      };
+      await axios(config)
+        .then((response) => {
+          console.log('signup user--->', response);
+          localStorage.setItem('userToken', response?.data?.data?.token);
+          localStorage.setItem('user_id', response?.data?.data?.user?.id);
+          console.log(response?.data?.data?.user?.id, 'id------>');
+          handleOrder(
+            response?.data?.data?.user?.id,
+            response?.data?.data?.token,
+          );
+        })
+        .catch((e) => {
+          console.log(e.message);
+        });
+    } catch (e) {
+      console.log(e.message);
+    }
+  };
+
+  const handleoption = (e) => {
+    setOptionalID([]);
+    setCheckboxes([]);
+    setCheckboxValue([]);
+    setOurTaxAddressType(e.target.value);
+    setOurTaxAddressValue(e.target.name);
     try {
       var config = {
-        method: "get",
-        url: `http://businessagentapi.dev-sh.xyz/api/business/mail`,
+        method: 'get',
+        url: `http://businessagentapi.dev-sh.xyz/api/optional-product?business_mail_id=${e.target.value}`,
       };
       axios(config)
         .then((response) => {
@@ -114,153 +273,23 @@ const FormComponent = () => {
     }
   };
 
-  const handleOrder = async (userId) => {
-    setLoader(true)
-    try {
-      const formData = new FormData();
-      formData.append("user_id", userId);
-      formData.append("des_comp_name", companyName);
-      formData.append("business_entity_type", businessType);
-      formData.append("noti_attorney_lawsuit", notifyAttorney);
-      formData.append("attorney_email", attorneyEmail);
-      formData.append("business_mail_delivered", taxAddress);
-      {
-        taxAddress === "Our Texas Address" &&
-          formData.append("business_mail_id", ourTaxAddressType);
-      }
-      {
-        attorneyEmail === 1 && formData.append("attorney_email", attorneyEmail);
-      }
-
-      var config = {
-        method: "post",
-        url: `http://businessagentapi.dev-sh.xyz/api/orders`,
-        data: formData,
-        headers: {
-          Accept: "application/json",
-          Authorization: `Bearer ${userToken}`,
-        },
-      };
-      await axios(config)
-        .then((response) => {
-          console.log("after order--->", response);
-          setLoader(false)
-          Swal.fire({
-            toast: true,
-            icon: 'success',
-            title: response.data.message,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-          })
-            history.push('/')
-        })
-        .catch((e) => {
-          setLoader(false)
-          console.log(e.message);
-
-          Swal.fire({
-            toast: true,
-            icon: 'error',
-            title: e.response?.data?.data?.message,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-          })
-        });
-    } catch (e) {
-      setLoader(false)
-      console.log(e.message);
-      Swal.fire({
-        toast: true,
-        icon: 'error',
-        title: e.response?.data?.data?.message,
-        position: 'top-end',
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.addEventListener('mouseenter', Swal.stopTimer)
-          toast.addEventListener('mouseleave', Swal.resumeTimer)
-        }
-      })
-    }
-  };
-
-  const handleSignup = async (v) => {
-    try {
-      const formData = new FormData();
-      formData.append("email", v?.email);
-      formData.append("password", v?.password);
-      formData.append("password_confirmation", v?.password_confirmation);
-      formData.append("fname", v?.fname);
-      formData.append("lname", v?.lname);
-      formData.append("phone", v?.phone);
-      formData.append("sec-phone", v?.sec_phone);
-      formData.append("fax", v?.fax);
-      formData.append("address", v?.address);
-      formData.append("city", v?.city);
-      formData.append("state", v?.state);
-      formData.append("postal", v?.postal);
-
-      var config = {
-        method: "post",
-        url: `http://businessagentapi.dev-sh.xyz/api/signup`,
-        data: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      };
-      await axios(config)
-        .then((response) => {
-          console.log("signup user--->", response);
-          localStorage.setItem("userToken", response?.data?.data?.token);
-          localStorage.setItem("user_id", response?.data?.data?.user?.id);
-          console.log(response?.data?.data?.user?.id, "id------>");
-          handleOrder(response?.data?.data?.user?.id);
-        })
-        .catch((e) => {
-          console.log(e.message);
-        });
-    } catch (e) {
-      console.log(e.message);
-    }
-  };
-
-  const handleoption = (e) => {
-    setOurTaxAddressType(e.target.value);
-    setOurTaxAddressValue(e.target.name);
-  };
-
-  console.log(ourTaxAddressType);
-
   return (
     <div className="main_form">
       {/* <Header /> */}
       <Formik
         initialValues={{
-          email: "",
-          password: "",
-          password_confirmation: "",
-          fname: "",
-          lname: "",
-          phone: "",
-          sec_phone: "",
-          fax: "",
-          address: "",
-          city: "",
-          state: "",
-          postal: "",
+          email: '',
+          password: '',
+          password_confirmation: '',
+          fname: '',
+          lname: '',
+          phone: '',
+          sec_phone: '',
+          fax: '',
+          address: '',
+          city: '',
+          state: '',
+          postal: '',
         }}
         validationSchema={SignupSchema}
         onSubmit={(values) => {
@@ -278,7 +307,7 @@ const FormComponent = () => {
                   <h4 className="form-heading">Order Information</h4>
                   <div className="section1">
                     <label className="form-label field_name">
-                      Desired Company Name or Legal Name{" "}
+                      Desired Company Name or Legal Name{' '}
                     </label>
                     <br />
                     <input
@@ -301,39 +330,16 @@ const FormComponent = () => {
                         setBusinessType(e.target.value);
                       }}
                     >
-                      <option value="llc" name="business-type">
-                        LLC
-                      </option>
-                      <option value="Registered Agent" name="business-type">
-                        Registered Agent
-                      </option>
-                      <option value="Form us a US Company" name="business-type">
-                        Form us a US Company
-                      </option>
-                      <option value="Form an LLC" name="business-type">
-                        Form an LLC
-                      </option>
-                      <option value="Form a non LLC" name="business-type">
-                        Form a non LLC
-                      </option>
-                      <option
-                        value="Form an S coorporation"
-                        name="business-type"
-                      >
-                        Form an S coorporation
-                      </option>
-                      <option
-                        value="Form a C coorporation"
-                        name="business-type"
-                      >
-                        Form a C coorporation
-                      </option>
-                      <option value="Form a non Profit" name="business-type">
-                        Form a non Profit
-                      </option>
+                      {business?.map((e, i) => {
+                        return (
+                          <option key={i} value={e?.id} name="business-type">
+                            {e?.name}
+                          </option>
+                        );
+                      })}
                     </select>
                     <label className="form-label  field_name ">
-                      Notify Your Attorney of a Lawsuit{" "}
+                      Notify Your Attorney of a Lawsuit{' '}
                     </label>
                     <br />
                     <select
@@ -351,11 +357,11 @@ const FormComponent = () => {
                       </option>
                     </select>
 
-                    {notifyAttorney === "1" && (
+                    {notifyAttorney === '1' && (
                       <div>
-                        {" "}
+                        {' '}
                         <label className="form-label field_name">
-                          Attorney Email{" "}
+                          Attorney Email{' '}
                         </label>
                         <br />
                         <input
@@ -370,7 +376,6 @@ const FormComponent = () => {
                       </div>
                     )}
 
-                    
                     <label className="form-label  field_name-para">
                       As your registered agent, we accept your company’s state
                       and legal mail. Where would you like your business mail
@@ -391,9 +396,9 @@ const FormComponent = () => {
                       <label className="form-check-label">
                         Our Texas Address
                       </label>
-                      {taxAddress === "Our Texas Address" && (
+                      {taxAddress === 'Our Texas Address' && (
                         <div>
-                          {Option?.map((e) => {
+                          {mail?.map((e) => {
                             return (
                               <>
                                 <div className="radio-address-child">
@@ -406,10 +411,7 @@ const FormComponent = () => {
                                     checked={ourTaxAddressType == e?.id}
                                     onChange={handleoption}
                                   />
-                                  <label
-                                    className="form-check-label"
-                                  
-                                  >
+                                  <label className="form-check-label">
                                     {`${e?.name}${e?.detail}`}
                                   </label>
                                   <br />
@@ -432,15 +434,10 @@ const FormComponent = () => {
                           setTaxAddress(e.target.value);
                         }}
                       />
-                      <label
-                        className="form-check-label"
-                       
-                      >
-                        Your Address
-                      </label>
+                      <label className="form-check-label">Your Address</label>
                     </div>
 
-                    {taxAddress === "Your Address" && (
+                    {taxAddress === 'Your Address' && (
                       <label className="your-address-child">
                         Okay, but you’re missing out on free mail forwarding, or
                         the option to get a unique mailing address for your new
@@ -455,7 +452,7 @@ const FormComponent = () => {
                       <div className="row">
                         <div className="col-lg-6 col-md-6 col-sm-12">
                           <label className="form-label field_name">
-                            First Name{" "}
+                            First Name{' '}
                           </label>
                           <Field
                             name="fname"
@@ -467,7 +464,7 @@ const FormComponent = () => {
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12">
                           <label className="form-label field_name">
-                            Last Name{" "}
+                            Last Name{' '}
                           </label>
                           <Field
                             name="lname"
@@ -490,7 +487,7 @@ const FormComponent = () => {
                     ) : null}
 
                     <label className="form-label field_name">
-                      Secondary Phone (optional){" "}
+                      Secondary Phone (optional){' '}
                     </label>
                     <Field
                       name="sec_phone"
@@ -501,13 +498,13 @@ const FormComponent = () => {
                     ) : null}
 
                     <label className="form-label field_name">
-                      Fax (optional){" "}
+                      Fax (optional){' '}
                     </label>
                     <Field name="fax" className="col-lg-12 form-control mb-3" />
                     {errors.fax && touched.fax ? <div>{errors.fax}</div> : null}
 
                     <label className="form-label field_name">
-                      Street Address / P.O. Box{" "}
+                      Street Address / P.O. Box{' '}
                     </label>
                     <Field
                       name="address"
@@ -530,7 +527,7 @@ const FormComponent = () => {
                       <div className="row">
                         <div className="col-lg-6 col-md-6 col-sm-12">
                           <label className="form-label field_name">
-                            State / Province{" "}
+                            State / Province{' '}
                           </label>
                           <Field
                             name="state"
@@ -542,7 +539,7 @@ const FormComponent = () => {
                         </div>
                         <div className="col-lg-6 col-md-6 col-sm-12">
                           <label className="form-label field_name">
-                            Zip / Postal{" "}
+                            Zip / Postal{' '}
                           </label>
                           <Field
                             name="postal"
@@ -592,72 +589,63 @@ const FormComponent = () => {
 
                   <h4 className="form-heading">Optional Products</h4>
                   <div className="section1">
-                    <div className="product-option">
-                      <input
-                        name="We’ll File Your Annual Franchise Tax Report for You"
-                        className="form-check-input"
-                        type="checkbox"
-                        value="45"
-                        checked={checkboxes.includes(
-                          "We’ll File Your Annual Franchise Tax Report for You"
-                        )}
-                        onChange={handleCheckboxChange}
-                      />
+                    {Option?.map((e) => {
+                      return (
+                        <>
+                          <div className="product-option">
+                            <input
+                              name={e?.name}
+                              className="form-check-input"
+                              type="checkbox"
+                              value={e?.price}
+                              id={e?.id}
+                              checked={checkboxes.includes(e?.name)}
+                              onChange={handleCheckboxChange}
+                            />
 
-                      <label className="form-check-label">
-                        We’ll File Your Annual Franchise Tax Report for You
-                      </label>
-                    </div>
+                            <label className="form-check-label">
+                              {e?.name}
+                            </label>
+                          </div>
+                        </>
+                      );
+                    })}
                     <br />
-                    <div className="product-option">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        value="65"
-                        name="Phone Service"
-                        checked={checkboxes.includes("Phone Service")}
-                        onChange={handleCheckboxChange}
-                      />
-                      <label className="form-check-label">Phone Service</label>
-                    </div>
-                    <br />
-                    <div className="product-option">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        value="95"
-                        name="Trademark Service – $499"
-                        checked={checkboxes.includes(
-                          "Trademark Service – $499"
-                        )}
-                        onChange={handleCheckboxChange}
-                      />
-
-                      <label className="form-check-label ">
-                        Trademark Service – $499
-                      </label>
-                    </div>
                   </div>
                 </div>
 
-                <div
-                  className={
-                  "col-lg-4 col-md-6 col-sm-12 col-xm-12 order-right"
-                  }
-                >
+                <div className="col-lg-4 col-md-6 col-sm-12 col-xm-12 order-right">
                   <h4 className="form-heading">Order Summary</h4>
                   <div className="section1">
                     <div className="order-summary-fields row">
                       <div className="temp">
                         <p className="order-summary-field-name">
-                          Registered Agent Service{" "}
+                          Registered Agent Service{' '}
                         </p>
                         <p className="order-summary-field-amount">$35.00</p>
                       </div>
                       <hr />
-
-                      {checkboxes.includes(
-                        "We’ll File Your Annual Franchise Tax Report for You"
+                      {checkboxes.map((e, i) => {
+                        return (
+                          <>
+                            <div className="temp">
+                              <p className="order-summary-field-name">{e}</p>
+                              <p className="order-summary-field-amount" key={i}>
+                                {CheckboxValue[i]}
+                              </p>
+                            </div>
+                          </>
+                        );
+                      })}
+                      {/* {CheckboxValue.map((e,i)=>{
+                          return(
+                            <p key={i} className='order-summary-field-amount'>
+                              {e}
+                            </p>
+                          )
+                        })} */}
+                      {/* {checkboxes.includes(
+                        'We’ll File Your Annual Franchise Tax Report for You',
                       ) && (
                         <>
                           <div className="temp">
@@ -671,7 +659,7 @@ const FormComponent = () => {
                           <hr />
                         </>
                       )}
-                      {checkboxes.includes("Phone Service") && (
+                      {checkboxes.includes('Phone Service') && (
                         <>
                           <div className="temp">
                             <p className="order-summary-field-name">
@@ -682,7 +670,7 @@ const FormComponent = () => {
                           <hr />
                         </>
                       )}
-                      {checkboxes.includes("Trademark Service – $499") && (
+                      {checkboxes.includes('Trademark Service – $499') && (
                         <>
                           <div className="temp">
                             <p className="order-summary-field-name">
@@ -693,13 +681,12 @@ const FormComponent = () => {
 
                           <hr />
                         </>
-                      )}
-                      {Option?.map((e) => {
+                      )} */}
+                      {mail?.map((e) => {
                         console.log(ourTaxAddressType == e.id);
-
                         return (
                           <>
-                            {taxAddress === "Our Texas Address" &&
+                            {taxAddress === 'Our Texas Address' &&
                               ourTaxAddressType == e.id && (
                                 <>
                                   <div className="temp">
@@ -710,7 +697,6 @@ const FormComponent = () => {
                                       {e?.price}
                                     </p>
                                   </div>
-
                                   <hr />
                                 </>
                               )}
@@ -721,7 +707,7 @@ const FormComponent = () => {
                       <div className="temp">
                         <p className="order-summary-field-total"> Total </p>
                         <p className="order-summary-field-total">
-                          {" "}
+                          {' '}
                           {35 + Number(OurTaxAddressValue) + total}
                         </p>
                       </div>
@@ -735,14 +721,14 @@ const FormComponent = () => {
                             color="#fff"
                             ariaLabel="three-dots-loading"
                             wrapperStyle={{
-                              display: "flex",
-                              justifyContent: "center",
+                              display: 'flex',
+                              justifyContent: 'center',
                             }}
                             wrapperClassName=""
                             visible={true}
                           />
                         ) : (
-                          "Submit Order"
+                          'Submit Order'
                         )}
                       </button>
                     </div>
