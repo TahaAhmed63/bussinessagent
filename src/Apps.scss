@@ -45,7 +45,14 @@
   color: #7f8387;
   // transition: all 0.4s;
 }
-
+.ein-card{
+  height: 430px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+}
+.card-body-ein{
+  padding: 20px 30px;
+}
 .drawer-menu a {
   display: block;
   padding: 0.625rem 1.5rem;

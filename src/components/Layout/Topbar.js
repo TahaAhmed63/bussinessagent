@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import classnames from 'classnames';
 import { withRouter } from 'react-router';
 import ReactDrawer from 'react-drawer';
@@ -551,7 +551,7 @@ class Topbar extends Component {
                         {/* <li className="megamenu-head"><i className="uil uil-book-open fs-6 align-middle"></i> Form a US Company</li> */}
                         <li><Link to="/index-classic-app" className="sub-menu-item">Form an LLC</Link></li>
                         <li><Link to="/index-apps" className="sub-menu-item">Form a C coorporation</Link></li>
-                        <li><Link to="/form" className="sub-menu-item">  Registered Agent</Link></li>
+                        <li><Link to="/ein" className="sub-menu-item">  Registered Agent</Link></li>
                         <li><Link to="/form" className="sub-menu-item">  Get an EIN</Link></li>
                       </ul>
                     </li>
