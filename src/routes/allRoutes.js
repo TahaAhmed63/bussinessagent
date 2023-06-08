@@ -314,6 +314,7 @@ import Forums from "../pages/Forums/index";
 //Footer layouts 
 import PageFooterLayouts from "../pages/Pages/PageFooterLayouts/PageFooterLayouts";
 import FormComponent from '../pages/Form/FormComponent';
+import EinPage from '../pages/EINPAGE/EinPage';
 
 const routes = [
   //routes without Layout
@@ -682,6 +683,7 @@ const routes = [
   { path: "/documentation", component: Documentation, isTopbarDark: true },
   { path: "/widget", component: Widget, isTopbarDark: true },
   { path: "/form", component: FormComponent, isTopbarDark: true },
+  { path: "/ein", component: EinPage, isTopbarDark: true },
 
   //Form Component
 

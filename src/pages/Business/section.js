@@ -33,6 +33,7 @@ class Section extends Component {
         this.setState({ startTyping: true });
       }, 1000); // Delay before resetting and starting again
     });
+    this.typist.reset();
   };
 
 

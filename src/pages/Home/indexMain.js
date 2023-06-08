@@ -116,13 +116,19 @@ class IndexMain extends Component {
       <React.Fragment>
         {/* Home Section */}
         <Section />
-
+        <section>
+          <Container>
+             <Row >
+                 <h1 className='text-center' style={{marginBottom:'30px'}}>What We Do ?</h1>
+             </Row>
+          </Container>
+        </section>
         {/* Feature */}
         <Features />
 
         {/* Cta */}
         <Cta />
-
+       
         {/* import AboutUs */}
         <Feature />
 
