@@ -10,6 +10,7 @@ import {
   Button,
   P,
 } from 'reactstrap';
+import bannerRegister from '../../assets/images/banner-4.jpg';
 
 const EinPage = () => {
   useEffect(() => {
@@ -33,13 +34,13 @@ const EinPage = () => {
     <React.Fragment>
       <section
         className="bg-half-170 d-table w-100 overflow-hidden"
-        style={{ height: '90vh' }}
+        style={{ height: '90vh', backgroundImage: `url(${bannerRegister})`,position: "relative",top:"13vh",marginBottom:"15%" }}
         id="home"
       >
         <Container>
           <Row className="align-items-center mt-5">
             <Col lg="6" md="11">
-              <h1>Get Your Federal Employer Identification Number</h1>
+              <h1 className=''>Get Your Federal Employer Identification Number</h1>
               <p className="fs-3">When You Want More</p>
               <p className="mt-5">
                 A Federal Employer Identification Number, or EIN, is a unique

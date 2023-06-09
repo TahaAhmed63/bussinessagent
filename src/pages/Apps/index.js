@@ -9,6 +9,7 @@ import ShowCase from "./ShowCase";
 import Pricing from "./Pricing";
 import Testi from "./Testi";
 import Popup from "../../components/Layout/popup";
+import bannerCorporate from '../../assets/images/banner-2.jpg';
 
 const Index = () => {
   useEffect(() => {
@@ -33,7 +34,7 @@ const Index = () => {
     <React.Fragment>
     <section
       className="bg-half-170 d-table w-100 overflow-hidden"
-      style={{ height: '90vh' }}
+      style={{height: '90vh', backgroundImage: `url(${bannerCorporate})`,position: "relative",top:"13vh",marginBottom:"15%"}}
       id="home"
     >
       <Container>

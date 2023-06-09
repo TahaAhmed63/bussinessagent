@@ -8,6 +8,7 @@ import img1 from '../../assets/images/app/classic01.png';
 import img2 from '../../assets/images/app/calender.png';
 import appImg from '../../assets/images/app/app.png';
 import playstoreImg from '../../assets/images/app/playstore.png';
+import bannerLLC from '../../assets/images/banner-1.jpg';
 
 //Import Components
 import Section from './Section';
@@ -37,7 +38,7 @@ const IndexClassicApp = () => {
     <React.Fragment>
       <section
         className="bg-half-170 d-table w-100 overflow-hidden"
-        style={{ height: '90vh' }}
+        style={{ height: '90vh', backgroundImage: `url(${bannerLLC})`,position: "relative",top:"13vh",marginBottom:"15%" }}
         id="home"
       >
         <Container>

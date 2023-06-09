@@ -683,7 +683,7 @@ const routes = [
   { path: "/documentation", component: Documentation, isTopbarDark: true },
   { path: "/widget", component: Widget, isTopbarDark: true },
   { path: "/form", component: FormComponent, isTopbarDark: true },
-  { path: "/ein", component: EinPage, isTopbarDark: true },
+  { path: "/registeragent", component: EinPage, isTopbarDark: true },
 
   //Form Component
 
