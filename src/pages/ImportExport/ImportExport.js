@@ -1,8 +1,13 @@
 import React from 'react'
-
+import Banner from './Banner'
+import './ImportExport.css'
+import Section3 from './Section3'
 const ImportExport = () => {
   return (
-    <div>ImportExport</div>
+    <div>
+        <Banner/>
+        <Section3/>
+    </div>
   )
 }
 

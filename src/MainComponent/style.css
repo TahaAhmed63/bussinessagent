@@ -1,0 +1,240 @@
+.header-transparent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1600px)
+{
+    .main-header {
+        padding: 28px 3px;
+    }
+
+}
+
+.f-right {
+    float: left;
+}
+@media (min-width: 992px)
+{
+.d-lg-block {
+    display: block!important;
+}
+}
+
+#navigation {
+    display: flex;
+    align-items: center;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+li{
+    list-style: none;
+}
+.sidebar-menu ul li ul.submenu {
+    position: absolute;
+    width: 170px;
+    background: #fff;
+    left: 100%;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+    padding: 17px 0;
+    transition: all 0.3s ease-out;
+  }
+  
+  .sidebar-menu ul li:hover ul.submenu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    left: 100%;
+  }
+.main-header .main-menu ul>li:hover>ul.submenu {
+    visibility: visible;
+
+    opacity: 1;
+    top: 100%;
+    /* left: 37%; */
+    left: 0%;
+}
+.main-header .main-menu ul ul.submenu {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    top: 120%;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 0 10px 3px rgba(0,0,0,0.05);
+    padding: 17px 0;
+    -webkit-transition: all .3s ease-out 0s;
+    -moz-transition: all .3s ease-out 0s;
+    -ms-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+}
+.main-header .main-menu ul>li{
+    position: relative;
+}
+.main-header .main-menu ul>li a {
+    font-family: "Barlow",sans-serif;
+ 
+    font-weight: 600;
+    padding: 18px;
+    display: block;
+    font-size: 11px;
+    -webkit-transition: all .3s ease-out 0s;
+    -moz-transition: all .3s ease-out 0s;
+    -ms-transition: all .3s ease-out 0s;
+    -o-transition: all .3s ease-out 0s;
+    transition: all .3s ease-out 0s;
+    text-transform: uppercase;
+    position: relative;
+}
+li{
+    list-style: none;
+
+}
+a{
+    text-decoration: none !important;
+    
+}
+.main-header .main-menu ul>li{
+    display: inline-flex;
+    align-items: center;
+}
+.dropdown-head{
+    padding-right: 0px !important;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebar-toggle {
+    position: absolute;
+ display: none;
+    z-index: 1;
+  }
+  
+  .sidebar-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    display: none;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .sidebar-toggle.open .bar {
+    background-color: transparent;
+  }
+  
+  .sidebar-menu {
+    padding: 20px;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 10px;
+  }
+
+  .sidebar-menu a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+
+  
+  .sidebar-menu .submenu li {
+    margin-bottom: 5px;
+  }
+  
+  .sidebar-menu .submenu a {
+    color: #555;
+  }
+  
+  .sidebar-menu .submenu.open {
+    display: block;
+  }
+  
+  @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 780px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    #navigation li{
+        display: none;
+    }
+    .sidebar-toggle {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .sidebar-toggle svg{
+
+        font-size: 25px;
+
+    }
+    .main-header{
+        padding: 20px 0px;
+    }
+    .hide-mb{
+        display: none;
+    }
+}
+.sidebar-menu .submenu {
+    position: absolute;
+    width: 170px;
+    background: #fff;
+    left: 100%;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
+    padding: 17px 0;
+    transition: all 0.3s ease-out;
+  }
+  
+  .sidebar-menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+@media only screen and (max-width:768px) {
+    #navigation li{
+        display: none;
+    }
+    .sidebar-toggle {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .sidebar-toggle svg{
+
+        font-size: 25px;
+
+    }
+    .main-header{
+        padding: 20px 0px;
+    }
+    .hide-mb{
+        display: none;
+    }
+}
