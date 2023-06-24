@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 import './components/Style.css'
 import './App.css'
 import FromAcorporation from './pages/FromCorporation/FromAcorporation';
-
+import ImportExport from './pages/ImportExport/ImportExport';
 function App() {
   return (
    <>
@@ -17,6 +17,7 @@ function App() {
        <Routes>
          <Route path='/' element={<Home/>}/>
          <Route path='/Corporation' element={<FromAcorporation/>}/>
+         <Route path='/ImportExport' element={<ImportExport/>}/>
        </Routes>
        <Footer/>
     </BrowserRouter>
