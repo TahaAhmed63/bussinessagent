@@ -5,6 +5,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import Footer from './components/Footer';
 import './components/Style.css'
+import Homes1 from './pages/formllc/homes1';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
      <StickyHeader/>
        <Routes>
          <Route path='/' element={<Home/>}/>
+         <Route path='/Homes1' element={<Homes1 />}/>
        </Routes>
        <Footer/>
     </BrowserRouter>
