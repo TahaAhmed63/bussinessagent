@@ -224,7 +224,7 @@ const Navbar = (props) => {
       </div>
     </header>
     //call navbar
- //<Navbar logo={mylogo}  linkcolor="rgb(19 19 19 / 93%)"/> xd
+ //<Navbar logo={mylogo}  linkcolor="rgb(19 19 19 / 93%)"/> 
   );
 };
 
