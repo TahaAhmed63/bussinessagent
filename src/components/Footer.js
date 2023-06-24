@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from '../assets/logoFooter.png'
+//import logo from '../assets/logoFooter.png'
 const Footer = () => {
  
 
@@ -13,11 +13,11 @@ const Footer = () => {
                 <div className="footer-widget footer-about-widget">
                   <div className="footer-logo">
                     <div className="site-logo">
-                      <img
+                      {/* <img
                         src={logo}
                         width="200px"
                         alt="Logo"
-                      />
+                      /> */}
                     </div>
                   </div>
                   <p>
