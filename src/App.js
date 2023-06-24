@@ -5,6 +5,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import Footer from './components/Footer';
 import './components/Style.css'
+import './App.css'
 import FromAcorporation from './pages/FromCorporation/FromAcorporation';
 
 function App() {
