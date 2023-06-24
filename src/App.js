@@ -6,6 +6,8 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import Footer from './components/Footer';
 import './components/Style.css'
 import Homes1 from './pages/formllc/homes1';
+import './App.css'
+import FromAcorporation from './pages/FromCorporation/FromAcorporation';
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
        <Routes>
          <Route path='/' element={<Home/>}/>
          <Route path='/Homes1' element={<Homes1 />}/>
+         <Route path='/corporation' element={<FromAcorporation />}/>
        </Routes>
        <Footer/>
     </BrowserRouter>
