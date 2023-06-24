@@ -19,13 +19,10 @@ function App() {
      <Navbar logo={logo}  linkcolor="#fff"/> 
        <Routes>
          <Route path='/' element={<Home/>}/>
-<<<<<<< HEAD
          <Route path='/Homes1' element={<Homes1 />}/>
          <Route path='/corporation' element={<FromAcorporation />}/>
-=======
          <Route path='/Corporation' element={<FromAcorporation/>}/>
          <Route path='/ImportExport' element={<ImportExport/>}/>
->>>>>>> d0acf9995d0a337f4b1b6f4328aa63bf0f75a933
        </Routes>
        <Footer/>
     </BrowserRouter>
