@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../../components/Banner'
+import Banner from './Banner'
 import './FromAcorporation.css'
 import Section2 from './Section2'
 import Section3 from './Section3'
