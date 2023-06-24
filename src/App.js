@@ -5,6 +5,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import Footer from './components/Footer';
 import './components/Style.css'
+import FromAcorporation from './pages/FromCorporation/FromAcorporation';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
      <StickyHeader/>
        <Routes>
          <Route path='/' element={<Home/>}/>
+         <Route path='/Corporation' element={<FromAcorporation/>}/>
        </Routes>
        <Footer/>
     </BrowserRouter>
