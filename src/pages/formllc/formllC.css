@@ -35,7 +35,6 @@
     height: 51.262725830078125px;
     top: 892.984375px;
     left: 152px;
-
 }
 
 #bannerbtn1 {
@@ -67,7 +66,8 @@
     width: 170px;
     height: 200px;
     border-radius: 10px;
-    background: linear-gradient(0deg, #FFFFFF, #7c7878);
+    background: white;
+    object-fit: contain;
     box-shadow: 0px 1px 14px -1px #000000;
     margin-left: 12px;
 }
@@ -88,14 +88,15 @@
     border-radius: 17px;
     height: 103px;
     width: 100%;
+    object-fit: contain;
 }
 
 .tiltes {
     font-family: Inter;
     font-size: 14px;
-    font-weight: 500;
-    line-height: 12px;
-    letter-spacing: 0px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 1px;
     text-align: center;
 }
 
@@ -137,5 +138,50 @@
     line-height: 32px;
     letter-spacing: -1px;
     text-align: justified;
+}
+.pera3 {
+    color: #000000 !important;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -1px;
+    text-align: justified;
+}
+.heading3 {
+    color: #000000 !important;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+}
 
+/* section3 */
+.Sectionimg3{
+    height: 400px;
+    background-size: 100%;
+   width:100%;
+}
+.box3{
+    width: 510.5714111328125px;
+    height: 468.163330078125px;
+    top: 1800.870849609375px;
+    left: 725.478515625px;
+    border-radius: 16px;
+    border: 3px solid gainsboro;
+    position: absolute;  
+}
+.box3:hover{
+  border: 3px solid #c7c4c4;
+  cursor: pointer;
+}
+
+/* 6 */
+.box6{
+    background-color: #fffbfb;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow:0px 0px 11px -1px black;
 }
