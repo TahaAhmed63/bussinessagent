@@ -32,16 +32,18 @@ const formllC = () => {
     ]
     return (
         <>
-            <section className='sectiones1 col-lg-8'>
+            <div class="container text-center sectiones1">
+                    <div class="row SecRow">
                 {listings.map((listing, imdex) => {
                     return (
-                        <div className="col-lg-4  box" key={imdex}>
-                            <img src={listing.img} alt="ok" className='img1' />
+                        <div className="col-lg-2 col-md-2 box" key={imdex}>
+                            <img src={listing.img} alt="ok" className='img1 col-md-5' />
                             <p className='tiltes'>{listing.title}</p>
                         </div>
                     )
                 })}
-            </section>
+            </div>
+            </div>
         </>
     )
 }

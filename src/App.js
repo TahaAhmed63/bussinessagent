@@ -4,7 +4,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import Footer from './components/Footer';
 import './components/Style.css'
-import Homes1 from './pages/formllc/homes1';
+import Llc from './pages/formllc/Llc';
 import './App.css'
 import FromAcorporation from './pages/FromCorporation/FromAcorporation';
 import ImportExport from './pages/ImportExport/ImportExport';
@@ -19,7 +19,7 @@ function App() {
      <Navbar logo={logo}  linkcolor="#fff"/> 
        <Routes>
          <Route path='/' element={<Home/>}/>
-         <Route path='/Homes1' element={<Homes1 />}/>
+         <Route path='/Llc' element={<Llc />}/>
          <Route path='/corporation' element={<FromAcorporation />}/>
          <Route path='/Corporation' element={<FromAcorporation/>}/>
          <Route path='/ImportExport' element={<ImportExport/>}/>
