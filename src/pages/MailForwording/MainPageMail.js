@@ -6,6 +6,7 @@ import MailServices from './MailServices'
 import RegistrationAgentServices from './RegistrationAgentServices'
 import AboutService from './AboutService'
 import WeOffer from './WeOffer'
+import "./style.css"
 const MainPageMail = () => {
   return (
  <> 

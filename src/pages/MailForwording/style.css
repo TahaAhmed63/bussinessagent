@@ -96,7 +96,7 @@ line-height: 120%;
 }
   .banner-main-img{
     width: 50%;
-    /* background-image: url(./../../assets/MailPageBanner/Vector.png); */
+/* // background-image: url(./../../assets/MailPageBanner/Vector.png);  */
 
     height: 100%;
     position: relative;
@@ -778,7 +778,7 @@ border-radius: 500px;
     flex-shrink: 0;
     border-radius: 500px;
     border: 24px solid var(--white, #FFF);
-    background: url(../../Assets/owner2.png.png) lightgray 50% / cover no-repeat;
+    background: url(../../assets/owner2.png.png) lightgray 50% / cover no-repeat;
 }
   
 .offer-info p{
