@@ -1,0 +1,21 @@
+import React from 'react'
+import img from '../../assets/Group 1331.png'
+const Section4 = () => {
+    return (
+        <>
+             <div class="container text-center Section31">
+                    <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                                <img src={img} alt="" className='w-100 Sectionimg3' />
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <h1 className='text-white text-start  heading3 '> 3. File the Certificate of Formation / Articles of Organization</h1>
+                                <p className='text-white text-start pera2'>To start an LLC, youll need to choose a name for your business, select a registered agent, file Articles of Organization with the state, create an operating agreement, obtain an Employer Identification Number (EIN) from the IRS, and pay any applicable state filing fees. LLC requirements vary state by state, so its important that you be well-versed in your specific state laws before proceeding. Generally, it comes down to these five basic steps in our How to Start an LLC guide below.</p>
+                            </div>
+                        </div>
+                    </div>
+        </>
+    )
+}
+
+export default Section4
