@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container,Row,Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import mybanner from "./../../Assets/MailPageBanner/MailBanner.png"
+import mybanner from "./../../assets/MailPageBanner/MailBanner.png"
 
 const MailBanner = () => {
   return (

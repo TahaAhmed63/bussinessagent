@@ -12,12 +12,15 @@ import Footer from './components/Footer';
 import './components/Style.css'
 import './App.css'
 import FromAcorporation from './pages/FromCorporation/FromAcorporation';
+import Virtualoffice from './pages/VirtualOffice/virtualoffice';
+import Second from './pages/FromCorporation/Second';
+
 import ImportExport from './pages/ImportExport/ImportExport';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainPageMail from './pages/MailForwording/MainPageMail';
 
 
- import logo from './Assets/Logo7.png'
+ import logo from './assets/Logo7.png'
    import Navbar from './MainComponent/Navbar';
 import PhoneService from './pages/PhoneServices/PhoneService';
 function App() {
@@ -35,6 +38,8 @@ function App() {
         
 
          <Route path='/Corporation' element={<FromAcorporation/>}/>
+         <Route path='/virtualoffice' element={<Virtualoffice />}/>
+         <Route path='/second' element={<Second />}/>
  <Route path='/ImportExport' element={<ImportExport/>}/> 
        </Routes>
    <Footer/>  

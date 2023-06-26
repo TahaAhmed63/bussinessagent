@@ -96,7 +96,7 @@ line-height: 120%;
 }
   .banner-main-img{
     width: 50%;
-    background-image: url(./../../Assets/MailPageBanner/Vector.png);
+    /* background-image: url(./../../assets/MailPageBanner/Vector.png); */
 
     height: 100%;
     position: relative;

@@ -1,5 +1,5 @@
 import React from 'react'
-import lady from "../../Assets/My project 1.png"
+import lady from "../../assets/My project 1.png"
 import {Container,Row,Col} from 'react-bootstrap'
 
 const RegistrationAgentServices = () => {

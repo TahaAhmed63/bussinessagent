@@ -1,9 +1,9 @@
 import React from 'react'
 import {Container,Row,Col} from 'react-bootstrap'
-import service1 from "../../Assets/icon1.png"
-import service2 from "../../Assets/icon2.png"
-import service3 from "../../Assets/icon4.png"
-import service4 from "../../Assets/icon5.png"
+import service1 from "../../assets/icon1.png"
+import service2 from "../../assets/icon2.png"
+import service3 from "../../assets/icon4.png"
+import service4 from "../../assets/icon5.png"
 
 const AboutService = () => {
   return (

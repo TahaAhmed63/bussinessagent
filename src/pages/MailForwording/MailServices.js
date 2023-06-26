@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import boxicon from "./../../Assets/booking 1.png"
-import boxicon1 from "../../Assets/destination 1.png"
+import boxicon from "./../../assets/booking 1.png"
+import boxicon1 from "../../assets/destination 1.png"
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from 'swiper/react';
