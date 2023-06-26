@@ -234,6 +234,9 @@ and (max-device-width: 780px){
     .set-mb{
         flex-direction: column !important;
     }
+    .services{
+        padding-bottom: 4rem !important;
+    }
     .main-head-wrap {
         width: 100%;
         padding-left: 5px;
@@ -412,9 +415,9 @@ height: 104.621px;
 flex-direction: column;
 align-self: stretch;
   }
-.img-wrap{
+/* .img-wrap{
     
-}
+} */
   .service-head-wrap h4{
     color: var(--grey-scale-black, #191825);
 font-size: 44px;
@@ -523,11 +526,101 @@ font-size: 18px;
 font-family: Inter;
 line-height: 160%;
 }
-.setting-lay{
+/* .setting-lay{
+
+} */
+
+
+@media((min-width:280px) and (max-width:526px)){
+    .main-head-wrap {
+        width: 100%;
+        padding-left: 5px;
+        padding-top: 35px;
+
+    }
+    .main-wrap-lady{
+        width: 100% !important;
+    }
+    .overlay{
+        width: 100% !important;
+
+    }
+    .set-mb{
+        flex-direction: column;
+    }
+.all-blue{
+    width: 100%  !important;
+}
+.registration-agent{
+    flex-direction: column;
+}
+    .head-1{
+        width: 100%;
+    }
+    .service-head-wrap{
+        width: 100% !important;
+    }
+    .lady-para-head h4{
+        width: 100% !important;
+    }
+    .service-head-wrap h6{
+        width:100%;
+    }
+    .service-head-wrap h4 {
+        width: 100%;
+        font-size: 44px;
+        height: 100% !important;
+    }
+    .service-head-wrap p {
+        width: 100% !important;
+    }
+    .head-1 h4{
+        text-align: left;
+        font-size: 19px;
+    }
+    .offer-main-wrap{
+        width: 100% !important;
+    }
+    .side-img-wrap{
+        width: 100% !important;
+    }
+    .side-img-wrap::after {
+        width: 100% !important;
+        left: 0vw !important;
+    }
+    .slide-wrap{
+        width: 100%;
+    }
+    .side-img-wrap::after{
+        width: 100% !important;
+    }
+    .main-box
+    {
+        padding: 0px !important;
+    }
+    .big-head {
+        width: 100%;
+        left: 0px;
+    }
+    .big-head h1 {
+        font-size: 37px;
+    }
+    .banner-para {
+        left: 0px;
+        width: 100%;
+    }
+    .banner-para p {
+        width: 100%;
+        padding: 0px;
+    }
+    .mail-btn{
+        padding: 0px;
+    }
+    .banner-main-img{
+        width: 100%;
+    }
 
 }
-
-
 
 .registration-agent{
     display: flex;

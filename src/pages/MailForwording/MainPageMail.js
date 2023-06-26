@@ -11,21 +11,18 @@ const MainPageMail = () => {
   return (
  <> 
 <Navbar logo={mylogo}  linkcolor="rgb(19 19 19 / 93%)"/> 
-<div >
+
 <MailBanner/>
-</div>
-<div>
+
   <MailServices/>
-</div>
-<div>
+
   <RegistrationAgentServices/>
-</div>
-<div>
+
+
   <AboutService/>
-</div>
- <div>
+
   <WeOffer/>
- </div>
+
  </>
   )
 }
