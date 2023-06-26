@@ -1,0 +1,10 @@
+.section6_box{
+    width: 261px;
+height: 82px;
+flex-shrink: 0;
+background: #FFF;
+box-shadow: 1px 4px 12px 0px rgba(0, 0, 0, 0.08);
+display: flex;
+justify-content: center;
+align-items: center;
+}

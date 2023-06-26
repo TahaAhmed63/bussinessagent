@@ -1,0 +1,40 @@
+
+.Equipment_img{
+height: 725.528px;
+flex-shrink: 0;
+    background-image: url("../../assets/banner/equipment_bg.png");
+    background-size: cover;
+  }
+  @media (max-width: 1024px) {
+    .Equipment_img {
+        height: 543px;
+    }
+  }
+  @media (max-width: 768px) {
+    .Equipment_img {
+        height: 416px;
+    }
+  }
+  @media (max-width: 425px) {
+    .Equipment_img {
+        height: 225px;
+    }
+  }
+  @media (max-width: 375px) {
+    .Equipment_img {
+        height: 200px;
+    }
+  }
+  /* @media (max-width: 320px) {
+    .Equipment_img {
+        height: 150px;
+    }
+  } */
+
+  .btnBanner1{
+  text-align: start;
+  font-size: 16px;
+  font-family: Inter;
+  padding: 10px 27px;
+  cursor: pointer;
+  }
