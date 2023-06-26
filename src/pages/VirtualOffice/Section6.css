@@ -1,0 +1,54 @@
+.section6{
+    background: linear-gradient(180deg, #FFF9F5 0%, #FFE7FF 100%);
+}
+.box_1{
+    width: 325.734px;
+height: 241.116px;
+flex-shrink: 0;
+border-radius: 10px;
+/* background: linear-gradient(136deg, #42CFCF 0%, #1C34FA 100%); */
+}
+.box{
+    width: 325.734px;
+height: 241.116px;
+flex-shrink: 0;
+border-radius: 10px;
+color: black;
+background: white;
+transition:  0.8s ease;
+}
+.box:hover{
+color: white;
+background: linear-gradient(136deg, #42CFCF 0%, #1C34FA 100%);
+.icon_color{
+    color: white;
+}
+.creative{
+    color: #FFF;
+font-size: 20px;
+font-family: Inter;
+font-weight: 500;
+line-height: 160%;
+}
+.creative2{
+    color: #FFF;
+font-size: 16px;
+font-family: Inter;
+font-weight: 500;
+line-height: 160%;
+}
+}
+.creative{
+    color: black;
+font-size: 20px;
+font-family: Inter;
+font-weight: 500;
+line-height: 160%;
+}
+.creative2{
+    color: black;
+font-size: 16px;
+font-family: Inter;
+font-weight: 500;
+line-height: 160%;
+}

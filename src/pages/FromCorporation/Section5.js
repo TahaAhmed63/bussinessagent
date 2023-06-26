@@ -1,11 +1,11 @@
 import React from "react";
-import img from "../../assets/section5img.png";
+// import img from "../../assets/section5img.png";
 const Section5 = () => {
   return (
     <div className="container mx-auto " style={{ marginTop:'100px',  }}>
       <div className="row align-items-center">
         <div className="col-md-6 ">
-          <img src={img} alt="Photos" width={"100%"} height={"376.08px"} />
+          {/* <img src={img} alt="Photos" width={"100%"} height={"376.08px"} /> */}
         </div>
         <div className="col-md-6 ">
           <h1 style={{ fontSize: "32px"}}>

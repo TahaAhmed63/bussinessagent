@@ -1,0 +1,30 @@
+import React from 'react'
+import Navbar from '../../MainComponent/Navbar'
+import mylogo from "./../../assets/Logo7.png"
+import MailBanner from './MailBanner'
+import MailServices from './MailServices'
+import RegistrationAgentServices from './RegistrationAgentServices'
+import AboutService from './AboutService'
+import WeOffer from './WeOffer'
+import "./style.css"
+const MainPageMail = () => {
+  return (
+ <> 
+ <Navbar logo={mylogo}  linkcolor="rgb(19 19 19 / 93%)"/>  
+
+<MailBanner/>
+
+  <MailServices/>
+
+  <RegistrationAgentServices/>
+
+
+  <AboutService/>
+
+  <WeOffer/>
+
+ </>
+  )
+}
+
+export default MainPageMail

@@ -1,5 +1,5 @@
 .header-transparent {
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     left: 0;
@@ -26,10 +26,30 @@
 #navigation {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 ul {
     margin: 0px;
     padding: 0px;
+}
+.service-info h6{
+    display: flex;
+flex-direction: column;
+align-self: stretch;
+color: #333461;
+font-size: 19px;
+font-family: Kumbh Sans;
+font-weight: 700;
+line-height: 24px;
+}
+.service-info P{
+    display: flex;
+flex-direction: column;
+align-self: stretch;
+color: #667085;
+font-size: 16px;
+font-family: Kumbh Sans;
+line-height: 24px;
 }
 
 li{
@@ -54,40 +74,52 @@ li{
     top: 0;
     left: 100%;
   }
-.main-header .main-menu ul>li:hover>ul.submenu {
+  .main-header .main-menu ul>li:hover>ul.submenu {
     visibility: visible;
-
     opacity: 1;
     top: 100%;
-    /* left: 37%; */
-    left: 0%;
-}
-.main-header .main-menu ul ul.submenu {
+    left: 0;
+  }
+  
+  .main-header .main-menu ul ul.submenu {
     position: absolute;
-    width: 100%;
+    width: 150px;
     background: #fff;
     left: 0;
-    top: 120%;
+    top: 100%;
     visibility: hidden;
     opacity: 0;
-    box-shadow: 0 0 10px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
     padding: 17px 0;
-    -webkit-transition: all .3s ease-out 0s;
-    -moz-transition: all .3s ease-out 0s;
-    -ms-transition: all .3s ease-out 0s;
-    -o-transition: all .3s ease-out 0s;
-    transition: all .3s ease-out 0s;
-}
+    transition: all 0.3s ease-out;
+  }
 .main-header .main-menu ul>li{
     position: relative;
 }
+.main-header .main-menu ul>li{
+    margin-right: 30px;
+}
+.main-header {
+    padding: 28px 3px;
+}
+.main-header .main-menu ul>li>.submenu>li a{
+    width: 100%;
+    border-bottom: 2px solid blue;
+    padding: 10px;
+
+}
+.main-header .main-menu ul>li>.submenu>li{
+    width: 100%;
+}
 .main-header .main-menu ul>li a {
-    font-family: "Barlow",sans-serif;
+
  
     font-weight: 600;
-    padding: 18px;
+    padding-top: 18px;
+     
+    padding-bottom: 18px;
     display: block;
-    font-size: 11px;
+    font-size: 13px;
     -webkit-transition: all .3s ease-out 0s;
     -moz-transition: all .3s ease-out 0s;
     -ms-transition: all .3s ease-out 0s;

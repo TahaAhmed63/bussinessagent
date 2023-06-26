@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from '../assets/logoFooter.png'
+import logo from './../assets/logoFooter.png'
 const Footer = () => {
  
 
@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="footer-widget footer-about-widget">
                   <div className="footer-logo">
                     <div className="site-logo">
-                      <img
+                       <img
                         src={logo}
                         width="200px"
                         alt="Logo"
@@ -80,11 +80,11 @@ const Footer = () => {
                       <button style={{width:'100%',height:'50px',marginTop:'10px',borderRadius:'40px',outline:'none',border:'none'}}>
                         Subscribe
                       </button>
-                      {/* <div className="btn-wrapper">
+                <div className="btn-wrapper">
                         <button className="theme-btn-1 btn" type="submit">
                           <i className="fas fa-location-arrow" />
                         </button>
-                      </div> */}
+                      </div> 
                     </form>
                   </div>
                 </div>
