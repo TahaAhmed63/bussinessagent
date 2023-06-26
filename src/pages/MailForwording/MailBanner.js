@@ -7,9 +7,11 @@ const MailBanner = () => {
   return (
 <>
 <div className="overlay"></div>
-<Container>
+<Container fluid className='mailbanner d-flex justify-content-center align-items-center'>
         <Row className="banenr-head-wrap">
-<Col md={6} lg={6} xxlg={6} sm={12} className="main-head-wrap">
+<Col md={6} lg={6} xxlg={6} sm={12} className="main-head-wrap"   style={{
+      width: "100%",
+    }}>
     <div className="head-1">
         <h4>
         MAIL FORWARDING
@@ -30,11 +32,7 @@ designing and managing conversion centered bootstrap v5 html page.
  <Link to=""> Get Started</Link>
 </div>
 </Col>
-<Col md={6} lg={6} xxlg={6} sm={12} className="banner-main-img">
-<div className="banner-img-wrap">
-        <img src={mybanner} className="img-fluid" alt="asa"/>
-    </div>
-</Col>
+
         </Row>
 </Container>
 

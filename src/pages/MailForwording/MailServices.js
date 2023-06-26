@@ -26,7 +26,7 @@ const MailServices = () => {
     },
     // when window width is >= 640px
     780: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 20,
     },
     900:{

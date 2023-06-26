@@ -23,16 +23,19 @@ import MainPageMail from './pages/MailForwording/MainPageMail';
  import logo from './assets/Logo7.png'
    import Navbar from './MainComponent/Navbar';
 import PhoneService from './pages/PhoneServices/PhoneService';
+import Registration from './pages/RegistrationAgent/Registration';
 function App() {
   return (
    <>
    <div className='App'>
     <BrowserRouter>
-     <Navbar logo={logo}  linkcolor="#000"/> 
+ 
        <Routes>
          <Route path='/' element={<Home/>}/>
          <Route path='/mailpage' element={<MainPageMail/>}/>
          <Route path='/phoneServices' element={<PhoneService/>}/>
+         <Route path='/registrationAgent' element={<Registration/>}/>
+
 
 
         
