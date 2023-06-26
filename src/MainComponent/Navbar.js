@@ -30,7 +30,7 @@ const Navbar = (props) => {
                 </div>
               </div>
               <div className="col-xl-10 col-lg-10 col-sm-10 col-md-10 hide-mb">
-                <div className="main-menu f-right d-lg-block">
+                <div className="main-menu d-lg-block">
                   <nav>
                     <ul id="navigation">
                       <li>
