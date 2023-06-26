@@ -18,9 +18,9 @@ const Navbar = (props) => {
 
   return (
 
-      <div className="header-area header-transparent">
+      <div className="header-transparent">
         <div className="main-header header-sticky">
-          <div className="container">
+          <div className="container bg-transparent">
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-2 col-md-2 ">
                 <div className="logo">

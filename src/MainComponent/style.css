@@ -1,9 +1,14 @@
 .header-transparent {
-    position: relative;
+    position: absolute;
     top: 0;
     right: 0;
     left: 0;
     z-index: 9;
+    background-color: transparent !important;
+}
+.main-header{
+    background-color: transparent !important;
+
 }
 @media only screen and (min-width: 1200px) and (max-width: 1600px)
 {
@@ -38,7 +43,8 @@ flex-direction: column;
 align-self: stretch;
 color: #333461;
 font-size: 19px;
-font-family: Kumbh Sans;
+font-family: 'Inter';
+
 font-weight: 700;
 line-height: 24px;
 }
@@ -48,7 +54,8 @@ flex-direction: column;
 align-self: stretch;
 color: #667085;
 font-size: 16px;
-font-family: Kumbh Sans;
+font-family: 'Inter';
+
 line-height: 24px;
 }
 

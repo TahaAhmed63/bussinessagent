@@ -23,6 +23,7 @@ import MainPageMail from "./pages/MailForwording/MainPageMail";
 import logo from "./assets/Logo7.png";
 import Navbar from "./MainComponent/Navbar";
 import PhoneService from "./pages/PhoneServices/PhoneService";
+import SellProduct from "./pages/SellProduct/SellProduct";
 function App() {
   return (
     <>
@@ -33,13 +34,12 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/mailpage" element={<MainPageMail />} />
             <Route path="/phoneServices" element={<PhoneService />} />
-
             <Route path="/Llc" element={<Llc />} />
             <Route path="/corporation" element={<FromAcorporation />} />
-            <Route path="/Corporation" element={<FromAcorporation />} />
             <Route path="/virtualoffice" element={<Virtualoffice />} />
             <Route path="/second" element={<Second />} />
             <Route path="/ImportExport" element={<ImportExport />} />
+            <Route path="/sellproduct" element={<SellProduct />} />
           </Routes>
           <Footer />
         </BrowserRouter>
