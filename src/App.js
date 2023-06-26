@@ -6,6 +6,8 @@ import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import Footer from './components/Footer';
 import './components/Style.css'
 import FromAcorporation from './pages/FromCorporation/FromAcorporation';
+import Virtualoffice from './pages/VirtualOffice/virtualoffice';
+import Second from './pages/FromCorporation/Second';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
        <Routes>
          <Route path='/' element={<Home/>}/>
          <Route path='/Corporation' element={<FromAcorporation/>}/>
+         <Route path='/virtualoffice' element={<Virtualoffice />}/>
+         <Route path='/second' element={<Second />}/>
        </Routes>
        <Footer/>
     </BrowserRouter>
