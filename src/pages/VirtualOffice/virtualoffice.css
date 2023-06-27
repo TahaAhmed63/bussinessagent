@@ -3,18 +3,18 @@
     margin: 0;
     box-sizing: border-box;
 }
-.FroImg{
+.FroImgsssss{
   min-height: 90vh;
   background-image: url("../../assets/banner/Banner5.png");
   background-size: cover;
 }
 @media (max-width: 1024px) {
-  .FroImg {
+  .FroImgsssss {
     min-height: 70vh;
   }
 }
 @media (max-width: 768px) {
-  .FroImg {
+  .FroImgsssss {
     min-height: 60vh;
   }
 }

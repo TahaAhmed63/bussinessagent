@@ -70,13 +70,16 @@ const Navbar = (props) => {
                         <Link style={linkStyle} to="" className="dropdown-head">Business Tools</Link>
                         <ul className="submenu">
                           <li>
-                            <Link   to="blog.html">Blog</Link>
+                            <Link style= {linkStyle}  to="/virtualoffice">Virtual Office</Link>
                           </li>
                           <li>
-                            <Link   to="blog_details.html">Blog Details</Link>
+                            <Link style= {linkStyle}  to="/mailpage">Mail Forwording</Link>
                           </li>
                           <li>
-                            <Link   to="elements.html">Elements</Link>
+                            <Link style= {linkStyle}  to="/">Business Address</Link>
+                          </li>
+                          <li>
+                            <Link style= {linkStyle}   to="/">Virtual Assitant</Link>
                           </li>
                         </ul>
                        <MdKeyboardArrowDown/>
@@ -85,13 +88,16 @@ const Navbar = (props) => {
                         <Link style= {linkStyle}    to="contact.html" className="dropdown-head">Other Services</Link>
                         <ul className="submenu">
                           <li>
-                            <Link  to="blog.html">Blog</Link>
+                            <Link  style= {linkStyle} to="/ImportExport">Import Export Services</Link>
                           </li>
                           <li>
-                            <Link   to="blog_details.html">Blog Details</Link>
+                            <Link  style= {linkStyle} to="/ImportExport">Equipment Supplying</Link>
                           </li>
                           <li>
-                            <Link to="elements.html">Elements</Link>
+                            <Link  style= {linkStyle}  to="sellproduct">Sell Product</Link>
+                          </li>
+                          <li>
+                            <Link  style= {linkStyle} to="/equipment">Buy The Equipment</Link>
                           </li>
                         </ul>
                        <MdKeyboardArrowDown/>

@@ -1,3 +1,7 @@
+*{
+    text-decoration: none;
+
+}
 .header-transparent {
     position: absolute;
     top: 0;
@@ -66,7 +70,6 @@ li{
 .sidebar-menu ul li ul.submenu {
     position: absolute;
     width: 170px;
-    background: #fff;
     left: 100%;
     top: 0;
     visibility: hidden;
@@ -92,7 +95,6 @@ li{
   .main-header .main-menu ul ul.submenu {
     position: absolute;
     width: 150px;
-    background: #fff;
     left: 0;
     top: 100%;
     visibility: hidden;
@@ -124,7 +126,6 @@ li{
  
     font-weight: 600;
     padding-top: 18px;
-     
     padding-bottom: 18px;
     display: block;
     font-size: 13px;

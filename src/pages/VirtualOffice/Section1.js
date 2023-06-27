@@ -4,7 +4,7 @@ import "../VirtualOffice/virtualoffice.css"
 const Section1 = () => {
     return (
         <div
-            className="conatiner-fluid FroImg d-flex justify-content-center align-items-center"
+            className="conatiner-fluid FroImgsssss d-flex justify-content-center align-items-center"
             style={{
                 width: "100%",
             }}
