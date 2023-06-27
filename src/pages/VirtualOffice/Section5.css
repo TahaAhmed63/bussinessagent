@@ -1,0 +1,33 @@
+.testimonials{
+    color: #0D8772;
+text-align: center;
+font-size: 16px;
+font-family: Poppins;
+font-weight: 600;
+letter-spacing: 3.2px;
+}
+.customer{
+    color: #292929;
+text-align: center;
+font-size: 50px;
+font-family: Montserrat;
+font-weight: 700;
+line-height: 60px;
+letter-spacing: -1px;
+}
+.justin{
+    color: #292929;
+font-size: 22px;
+font-family: Inter;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: -0.4px;
+}
+.CEO{
+    color: #83828A;
+font-size: 14px;
+font-family: Inter;
+font-weight: 500;
+line-height: 14px;
+letter-spacing: -0.4px;
+}

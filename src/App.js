@@ -1,77 +1,54 @@
-import React, { Component, Suspense } from "react";
-import Layout from "./components/Layout/";
-import {
-  Route,
-  Switch,
-  BrowserRouter as Router,
-  withRouter,
-} from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+// import StickyHeader from './components/Header'
 
-// Import Css
-import "./assets/css/materialdesignicons.min.css"
-import "./Apps.scss";
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import Footer from "./components/Footer";
+import "./components/Style.css";
+import Llc from "./pages/formllc/Llc";
+import "./App.css";
+import FromAcorporation from "./pages/FromCorporation/FromAcorporation";
+import Virtualoffice from "./pages/VirtualOffice/virtualoffice";
+import ImportExport from "./pages/ImportExport/ImportExport";
+import "bootstrap/dist/css/bootstrap.min.css";
+import MainPageMail from "./pages/MailForwording/MainPageMail";
+import PhoneService from "./pages/PhoneServices/PhoneService";
+import SellProduct from "./pages/SellProduct/SellProduct";
+import Registration from './pages/RegistrationAgent/Registration';
+import Buyfromus from "./pages/BuyFromUs/Buyfromus";
+import Heromain from "./pages/homeSection/Heromain";
+import EquipmentSourcing from "./pages/EquipmentSoucring/EquipmentSourcing";
+function App() {
+  return (
+    <>
+      <div className="App">
+        <BrowserRouter>
+      
+          <Routes>
+            <Route path="/" element={<Heromain />} />
+            <Route path="/mailpage" element={<MainPageMail />} />
+            <Route path="/phoneServices" element={<PhoneService />} />
+            <Route path="/Llc" element={<Llc />} />
+            <Route path="/corporation" element={<FromAcorporation />} />
+            <Route path="/virtualoffice" element={<Virtualoffice />} />
+            <Route path="/ImportExport" element={<ImportExport />} />
+            <Route path="/sellproduct" element={<SellProduct />} />
+            <Route path="/registration" element={<Registration />} />
+            <Route path="/Buyfromus" element={<Buyfromus />} />
 
-// import "./assets/css/colors/default.css";
-
-// Include Routes
-import routes from "./routes/allRoutes";
-
-function withLayout(WrappedComponent, hasDarkTopBar) {
-  // ...and returns another component...
-  /* eslint-disable react/display-name */
-  return class extends React.Component {
-    render() {
-      return (
-        <Layout hasDarkTopBar={hasDarkTopBar}>
-          <WrappedComponent></WrappedComponent>
-        </Layout>
-      );
-    }
-  };
-}
-
-class App extends Component {
-  Loader = () => {
-    return (
-      <div id="preloader">
-        <div id="status">
-          <div className="spinner">
-            <div className="double-bounce1"></div>
-            <div className="double-bounce2"></div>
-          </div>
-        </div>
+            <Route path="/equipment" element={<EquipmentSourcing />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
       </div>
-    );
-  };
-  render() {
-    return (
-      <React.Fragment>
-        <Router>
-          <Suspense fallback={this.Loader()}>
-            <Switch>
-              {routes.map((route, idx) =>
-                route.isWithoutLayout ? (
-                  <Route
-                    path={route.path}
-                    exact={route.exact}
-                    component={route.component}
-                    key={idx}
-                  />
-                ) : (
-                  <Route
-                    path={route.path}
-                    exact
-                    component={withLayout(route.component, route.isTopbarDark)}
-                    key={idx}
-                  />
-                )
-              )}
-            </Switch>
-          </Suspense>
-        </Router>
-      </React.Fragment>
-    );
-  }
+    </>
+  );
 }
 
-export default withRouter(App);
+export default App;

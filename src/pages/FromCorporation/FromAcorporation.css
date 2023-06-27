@@ -1,0 +1,44 @@
+.FroImgas{
+    width: 1402.178px; 
+    height: 751.572px;
+    flex-shrink: 0;
+    background-image: url("../../assets/banner/Banner3.png"); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-size: cover; */
+  }
+  .h1{
+    color: #FFF;
+  font-size: 60px;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 66px;
+  /* letter-spacing: -1px; */
+  
+  }
+  .p{
+    color: #FFF;
+  font-size: 18px;
+  font-family: Inter;
+  line-height: 32px;
+  letter-spacing: -1px;
+  }
+  .btnBanner{
+    border-radius: 5px;
+  border: 1px solid #FFF;
+  background: #FFF;
+  color: #651C9F;
+  text-align: center;
+  font-size: 16px;
+  font-family: Inter;
+  padding: 10px 27px;
+  }
+.Section2btn{
+    border-radius: 5px;
+background: linear-gradient(232deg, #651C9F 0%, #13C1E9 100%);
+display: inline-flex;
+padding: 10px 27px;
+align-items: flex-start;
+gap: 10px;
+border: none;
+}

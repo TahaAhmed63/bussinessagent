@@ -1,0 +1,26 @@
+import React from 'react'
+import Section1 from './Section1'
+import Banners1 from './Banners_1';
+import Section2 from './Section2';
+import Section3 from './Section3';
+import Section4 from './Section4';
+import Section5 from './Section5';
+import Section6 from './Section6';
+import Navbar from '../../MainComponent/Navbar';
+import Logo from '../../assets/logoFooter.png'
+const Llc = () => {
+  return (
+    <>
+    <Navbar logo={Logo} linkcolor="white"/>
+        <Banners1 />
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Section6 />
+    </>
+  )
+}
+
+export default Llc
