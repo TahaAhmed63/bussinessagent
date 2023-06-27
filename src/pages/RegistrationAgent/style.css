@@ -181,6 +181,14 @@ line-height: 75px;
 letter-spacing: -1px;
 
 }
+.main-head-agent{
+    color: #191919;
+text-align: center;
+font-size: 62px;
+font-family: Work Sans;
+font-weight: 600;
+line-height: 110%;
+}
 .main-us {
     background: #F1F1F1;
     height: 919px;
