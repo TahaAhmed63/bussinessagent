@@ -7,10 +7,14 @@ import Section4 from './Section4'
 import Section5 from './Section5'
 import Section6 from './Section6'
 import Section7 from './Section7'
+import Navbar from '../../MainComponent/Navbar'
+import logo from "../../assets/Logo7.png";
 
 const Virtualoffice = () => {
     return (
-       <>
+       <div className='text-white'>
+          <Navbar logo={logo} linkcolor="white" />
+
       <Section1 />
       <Section2 />
       <Section3 />
@@ -18,7 +22,7 @@ const Virtualoffice = () => {
       <Section5 />
       <Section6 />
       <Section7 />
-       </>
+       </div>
     )
 }
 

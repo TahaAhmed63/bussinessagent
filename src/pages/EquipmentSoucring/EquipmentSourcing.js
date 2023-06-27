@@ -6,10 +6,13 @@ import Section3 from './Section3'
 import Section4 from './Section4'
 import Section5 from './Section5'
 import Section6 from './Section6'
+import Navbar from '../../MainComponent/Navbar'
+import logo from "../../assets/Logo7.png";
 
 const EquipmentSourcing = () => {
     return (
-        <>
+        <div className='text-white'>
+         <Navbar logo={logo} linkcolor="white" />
             <div
                 className="conatiner-fluid Equipment_img"
                 style={{
@@ -35,7 +38,7 @@ const EquipmentSourcing = () => {
             <Section4 />
             <Section5 />
             <Section6 />
-        </>
+        </div>
     )
 }
 

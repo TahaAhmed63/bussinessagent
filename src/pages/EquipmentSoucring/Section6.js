@@ -9,6 +9,7 @@ import image6 from "../../assets/banner/social_icon/img6.png"
 import image7 from "../../assets/banner/social_icon/img7.png"
 
 const Section6 = () => {
+
     const images = [
         {
             image: image1
@@ -33,8 +34,10 @@ const Section6 = () => {
         }
     ]
 
+   
+
     return (
-        <div className='container '>
+        <div className='container text-dark'>
             <div style={{ fontSize: '32px', fontWeight: "700" }} className='col text-center'>
                 Our Trusted Clients
             </div>

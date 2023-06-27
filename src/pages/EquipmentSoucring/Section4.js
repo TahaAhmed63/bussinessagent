@@ -5,7 +5,7 @@ import icon_img from "../../assets/banner/Left.png"
 const Section4 = () => {
     return (
         <div style={{ background: "#F6F6F6" }} className='container-fluid my-5 py-5'>
-            <div className='container flex-column d-flex justify-content-center align-items-center' >
+            <div className='container text-dark flex-column d-flex justify-content-center align-items-center' >
                 <div className='col ' style={{ fontSize: "36px", fontWeight: "500" }} >
                     Light, Fast & Powerful
                 </div>
