@@ -209,6 +209,7 @@ font-size: 35px !important;
   .slide-info{
     width: 40%;
     display: flex;
+    justify-content: flex-end;
   }
 }
   @media ((min-width:769px) and (max-width:1024px)){
@@ -218,17 +219,41 @@ font-size: 35px !important;
     .all-blue{
         width: 40% !important;
     }
+    .slide-wrap{
+        width: 40% !important;
+    }
     .main-box{
         padding: 0px !important;
     }
+    .service-head-wrap h4 {
+        color: var(--grey-scale-black, #191825);
+        font-size: 50px !important;
+        font-family: Inter;
+        justify-content: center;
+        font-weight: 700;
+        line-height: 120%;
+    }
+    .main-box:hover{
+        background: linear-gradient(162deg, #1F37FF 0%, #651C9F 100%);
+color: white !important;
+transition: 1.2 s step-start;
+
+    }
+    .package-box:hover{
+        background: linear-gradient(162deg, #1F37FF 0%, #651C9F 100%);
+        color: white !important;
+        transition: 1.2 s step-start;
+    }
+  
+    .box-para 
     .phonebanner{
         height: 500px !important;
       }
-    .lady-para-head h4 {
-display: flex;
-width: 60% !important;
-font-size: 35px !important;
-  }
+      .lady-para-head h4 {
+        display: flex;
+        width: 99% !important;
+        font-size: 35px !important;
+    }
   .slide-info{
     width: 40%;
     display: flex;
@@ -270,7 +295,7 @@ font-size: 35px !important;
 }
 @media only screen 
 and (min-device-width: 481px) 
-and (max-device-width: 780px){
+and (max-device-width: 767px){
     .set-mb{
         flex-direction: column !important;
     }
@@ -296,9 +321,9 @@ and (max-device-width: 780px){
         width: 48%;
         left: 0px;
     }
-    .big-head h1 {
-        font-size: 37px;
-    }
+  .big-head h1 {
+    font-size: 28px;
+}
 
     .banner-para {
         left: 0px;
@@ -568,14 +593,14 @@ font-weight: 700;
 line-height: 120%;
 
 }
-.package-box p{
+.package-box p {
     color: var(--grey-scale-black, #191825);
-
-/* Body */
-font-size: 18px;
-font-family: Inter;
-line-height: 160%;
+    font-size: 16px;
+    font-family: Inter;
+    line-height: 160%;
 }
+
+
 /* .setting-lay{
 
 } */
@@ -587,6 +612,9 @@ line-height: 160%;
         padding-left: 5px;
         padding-top: 35px;
 
+    }
+    .mailbanner{
+        height: 500px;
     }
     .main-wrap-lady{
         width: 100% !important;

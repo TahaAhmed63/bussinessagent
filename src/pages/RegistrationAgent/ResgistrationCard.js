@@ -1,11 +1,10 @@
 import React from 'react'
-import dollar from "./../../assets/$50.png"
 import check from "./../../assets/check.png"
 import { Link } from 'react-router-dom'
 const ResgistrationCard = () => {
   return (
    <>
-<div className='container pd-10'>
+<div className='container '>
 <div className='row mx-auto'>
 <div className='blog-wrap d-flex w-100 justify-content-space-around'>
 <div className='blog-box'>
@@ -26,67 +25,71 @@ EIN SERVICE
     <p>Have a social security number (SSN)? Great! Let us deal with the IRS and get your EIN fast.</p>
 </div>
 <div className='row justify-content-center d-flex main'>
-    <div className='col-md-2 '>
-        <img src={check} style={{
+
+
+<div className='d-flex w-100 layout-flex'>
+        <div className='img'>
+        <img alt='asas' src={check} style={{
          width: "23.197px",
          height:" 21.213px"
         }}/>
-    </div>
-    <div className='col-md-10'>
+        </div>
+ 
+    <div className='para '>
        <p className='card-para-2'>No hassles</p>
        <div className='underline-2'>
         <p></p>
        </div>
     </div>
-
-
-    <div className='col-md-2'>
-        <img src={check} style={{
+</div>
+<div className='d-flex w-100 layout-flex'>
+        <div className='img'>
+        <img alt='asas' src={check} style={{
          width: "23.197px",
          height:" 21.213px"
         }}/>
-    </div>
-    <div className='col-md-10'>
-    <p  className='card-para-2'>Stress free</p>
-    <div className='underline-2'>
-        <p></p>
-    </div>
-    </div>
-
-
-    <div className='col-md-2'>
-        <img src={check} style={{
-         width: "23.197px",
-         height:" 21.213px"
-        }}/>
-
+        </div>
  
-</div>
-<div className='col-md-10'>
-    <p  className='card-para-2'>Filed in 2 days</p>
-    <div className='underline-2'>
-    <div className='underline-2'>
+    <div className='para '>
+       <p className='card-para-2'>Stress free</p>
+       <div className='underline-2'>
         <p></p>
+       </div>
     </div>
-    </div>
-    </div>
+</div>
 
-    <div className='col-md-2'>
-        <img src={check} style={{
+
+<div className='d-flex w-100 layout-flex'>
+        <div className='img'>
+        <img alt='asas' src={check} style={{
          width: "23.197px",
          height:" 21.213px"
         }}/>
-
-
-</div>
-<div className='col-md-10'>
-    <p  className='card-para-2'>   EIN received in 4 days</p>
-    <div className='underline-2'>
-    <div className='underline-2'>
+        </div>
+ 
+    <div className='para '>
+       <p className='card-para-2'>Filed in 2 days</p>
+       <div className='underline-2'>
         <p></p>
+       </div>
     </div>
+</div>
+
+<div className='d-flex w-100 layout-flex'>
+        <div className='img'>
+        <img alt='asas' src={check} style={{
+         width: "23.197px",
+         height:" 21.213px"
+        }}/>
+        </div>
+ 
+    <div className='para '>
+       <p className='card-para-2'>EIN received in 4 days</p>
+       <div className='underline-2'>
+        <p></p>
+       </div>
     </div>
-    </div>
+</div>
 </div>
 <div className='d-flex justify-content-center align-items-center ' style={{
     position:"relative",
@@ -113,67 +116,71 @@ EIN SERVICE
     <p>Have a social security number (SSN)? Great! Let us deal with the IRS and get your EIN fast.</p>
 </div>
 <div className='row justify-content-center d-flex main'>
-    <div className='col-md-2 '>
-        <img src={check} style={{
+
+
+<div className='d-flex w-100 layout-flex'>
+        <div className='img'>
+        <img alt='asas' src={check} style={{
          width: "23.197px",
          height:" 21.213px"
         }}/>
-    </div>
-    <div className='col-md-10'>
-       <p className='card-para-2'>We follow up with the IRSa</p>
+        </div>
+ 
+    <div className='para '>
+       <p className='card-para-2'>No hassles</p>
        <div className='underline-2'>
         <p></p>
        </div>
     </div>
-
-
-    <div className='col-md-2'>
-        <img src={check} style={{
+</div>
+<div className='d-flex w-100 layout-flex'>
+        <div className='img'>
+        <img alt='asas' src={check} style={{
          width: "23.197px",
          height:" 21.213px"
         }}/>
-    </div>
-    <div className='col-md-10'>
-    <p  className='card-para-2'>No hidden fees</p>
-    <div className='underline-2'>
-        <p></p>
-    </div>
-    </div>
-
-
-    <div className='col-md-2'>
-        <img src={check} style={{
-         width: "23.197px",
-         height:" 21.213px"
-        }}/>
-
+        </div>
  
-</div>
-<div className='col-md-10'>
-    <p  className='card-para-2'>Filed in 2 days</p>
-    <div className='underline-2'>
-    <div className='underline-2'>
+    <div className='para '>
+       <p className='card-para-2'>Stress free</p>
+       <div className='underline-2'>
         <p></p>
+       </div>
     </div>
-    </div>
-    </div>
+</div>
 
-    <div className='col-md-2'>
-        <img src={check} style={{
+
+<div className='d-flex w-100 layout-flex'>
+        <div className='img'>
+        <img alt='asas' src={check} style={{
          width: "23.197px",
          height:" 21.213px"
         }}/>
-
-
-</div>
-<div className='col-md-10'>
-    <p  className='card-para-2'>   EIN received in 10 days</p>
-    <div className='underline-2'>
-    <div className='underline-2'>
+        </div>
+ 
+    <div className='para '>
+       <p className='card-para-2'>Filed in 2 days</p>
+       <div className='underline-2'>
         <p></p>
+       </div>
     </div>
+</div>
+
+<div className='d-flex w-100 layout-flex'>
+        <div className='img'>
+        <img alt='asas' src={check} style={{
+         width: "23.197px",
+         height:" 21.213px"
+        }}/>
+        </div>
+ 
+    <div className='para '>
+       <p className='card-para-2'>EIN received in 4 days</p>
+       <div className='underline-2'>
+        <p></p>
+       </div>
     </div>
-    </div>
+</div>
 </div>
 <div className='d-flex justify-content-center align-items-center ' style={{
     position:"relative",
