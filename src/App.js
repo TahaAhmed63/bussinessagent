@@ -9,16 +9,19 @@ import './App.css'
 import FromAcorporation from './pages/FromCorporation/FromAcorporation';
 import ImportExport from './pages/ImportExport/ImportExport';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from './assets/Logo7.png'
-import Navbar from './MainComponent/Navbar';
+import Heromain from './pages/homeSection/Heromain';
+// import logo from './assets/Logo7.png'
+// import Navbar from './MainComponent/Navbar';
+
 function App() {
   return (
    <>
    <div className='App'>
     <BrowserRouter>
-     <Navbar logo={logo}  linkcolor="#fff"/> 
+     {/* <Navbar logo={logo}  linkcolor="#fff"/>  */}
        <Routes>
          <Route path='/' element={<Home/>}/>
+         <Route path='/HomeSection' element={<Heromain />}/>
          <Route path='/Llc' element={<Llc />}/>
          <Route path='/corporation' element={<FromAcorporation />}/>
          <Route path='/Corporation' element={<FromAcorporation/>}/>

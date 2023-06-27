@@ -36,7 +36,7 @@ const formllC = () => {
                     <div class="row SecRow">
                 {listings.map((listing, imdex) => {
                     return (
-                        <div className="col-lg-2 col-md-2 box" key={imdex}>
+                        <div className="col-lg-2 col-md-2 col-12 box" key={imdex}>
                             <img src={listing.img} alt="ok" className='img1 col-md-5' />
                             <p className='tiltes'>{listing.title}</p>
                         </div>

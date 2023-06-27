@@ -127,7 +127,7 @@
         height: 180px;
     }
     .box3 {
-        margin-top: 940px;
+        margin-top: 847px;
         width: 358.571411px !important;
         left: 57.478516px !important;
         height: 380px !important;
@@ -138,9 +138,18 @@
     .pera2{
         font-size: 13px !important;
     }
+    .heading2 {
+        font-size: 24px !important;
+    }
     .heading1 {
         font-family: Inter;
         font-size: 25px;
+    }
+    .heading3 {
+        font-size: 24px !important;
+    }
+    .Section31 {
+        margin-top: 100px !important;
     }
     .pera1 {
         font-family: Inter;
@@ -152,6 +161,43 @@
     }
     .Section3 {
         margin-top: 100px;
+    }
+}
+@media (max-width:375px){
+    .box3 {
+        margin-top: 917px !important;
+        width: 329.571411px !important;
+        left: 36.478516px !important;
+        height: 352px !important;
+    }
+    .sectiones1 {
+        left: 0px;
+        height: auto;
+        width: 81px !important;
+    }
+    .tiltes {
+        font-size: 7px !important;
+        font-weight: 700 !important;
+    }
+}
+@media (max-width:320px){
+    .box3 {
+        margin-top: 1166px !important;
+        width: 284.571411px !important;
+        left: 36.478516px !important;
+        height: 291px !important;
+    }
+    .box {
+       margin-left: 3px;
+    }
+    .sectiones1{
+        left: -2px !important;
+    }
+    .Section31 {
+        margin-top: 33px !important;
+    }
+    .box3 {
+        display: none;
     }
 }
 .box:hover {
