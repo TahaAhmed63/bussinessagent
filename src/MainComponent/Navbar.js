@@ -24,7 +24,7 @@ const Navbar = (props) => {
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-2 col-md-2 ">
                 <div className="logo">
-                  <Link to="index.html">
+                  <Link to="/">
                     <img src={logo} className="img-fluid" alt="sadsa" />
                   </Link>
                 </div>
@@ -34,19 +34,19 @@ const Navbar = (props) => {
                   <nav>
                     <ul id="navigation">
                       <li>
-                        <Link style={linkStyle} to="">Home</Link>
+                        <Link  style={linkStyle} to="/">Home</Link>
                       </li>
                       <li >
                         <Link style={linkStyle} className="dropdown-head" to="">Form A Us Company</Link>
                         <ul className="submenu">
                           <li>
-                            <Link  style={linkStyle} to="blog.html">Blog</Link>
+                            <Link  style={linkStyle} to="/Llc">Start An LLC</Link>
                           </li>
                           <li>
-                            <Link  style={linkStyle} to="blog_details.html">Blog Details</Link>
+                            <Link  style={linkStyle} to="/corporation">From A Corporation</Link>
                           </li>
                           <li>
-                            <Link  style={linkStyle} to="elements.html">Elements</Link>
+                            <Link  style={linkStyle} to="/registration">Register Agent</Link>
                           </li>
                         </ul>
                        <MdKeyboardArrowDown/>

@@ -6,10 +6,12 @@ import Section3 from './Section3';
 import Section4 from './Section4';
 import Section5 from './Section5';
 import Section6 from './Section6';
-
+import Navbar from '../../MainComponent/Navbar';
+import Logo from '../../assets/logoFooter.png'
 const Llc = () => {
   return (
     <>
+    <Navbar logo={Logo} linkcolor="white"/>
         <Banners1 />
         <Section1 />
         <Section2 />

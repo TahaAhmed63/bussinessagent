@@ -7,9 +7,13 @@ import Section4 from './Section4'
 import Section5 from './Section5'
 import Section6 from './Section6'
 import Section7 from './section7'
+import Navbar from '../../MainComponent/Navbar'
+import logo from '../../assets/logoFooter.png'
+import Header from '../../components/Header'
 const FromAcorporation = () => {
   return (
     <div>
+    <Navbar logo={logo} linkcolor="white"/>
       <Banner/>
       <Section2/>
       <Section3/>

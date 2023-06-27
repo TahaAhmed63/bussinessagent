@@ -31,13 +31,13 @@ const Footer = () => {
                   <div className="footer-menu go-top">
                     <ul>
                       <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/Llc">From A LLc</Link>
                       </li>
                       <li>
-                        <Link to="/faq">FAQ</Link>
+                        <Link to="/corporation">From A Corporation</Link>
                       </li>
                       <li>
-                        <Link to="/contact">Contact us</Link>
+                        <Link to="/registration">Register Agent</Link>
                       </li>
                     </ul>
                   </div>
@@ -49,22 +49,22 @@ const Footer = () => {
                   <div className="footer-menu go-top">
                     <ul>
                       <li>
-                        <Link to="/services">Assignment Help</Link>
+                        <Link to="/services">Abc Help</Link>
                       </li>
                       <li>
-                        <Link to="/DissertationHelp">Dissertation Help</Link>
+                        <Link to="/DissertationHelp">Abc Help</Link>
                       </li>
                       <li>
-                        <Link to="/EssayHelp">Essay Help</Link>
+                        <Link to="/EssayHelp">ABC Help</Link>
                       </li>
                       <li>
-                        <Link to="/Livesession">Live Sessions</Link>
+                        <Link to="/Livesession">Abc Sessions</Link>
                       </li>
                       <li>
-                        <Link to="/PresentationWriting">Presentation Writing</Link>
+                        <Link to="/PresentationWriting">ABc Writing</Link>
                       </li>
                       <li>
-                        <Link to="/projectReport">Project Report</Link>
+                        <Link to="/projectReport">ABc Report</Link>
                       </li>
                     </ul>
                   </div>
