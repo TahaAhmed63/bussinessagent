@@ -26,19 +26,23 @@ const MailServices = () => {
     },
     // when window width is >= 640px
     780: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20,
     },
     900:{
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20,
+    },
+    1200:{
+      slidesPerView: 2,
+      spaceBetween: 10,
     }
   }
   return (
     <>
 
 <section className='services'>
-<Container className='d-flex set-mb'>
+<Container  className='d-flex set-mb'>
 
     <div className='d-flex slide-info' >
 <div className='service-head-wrap'>
@@ -53,7 +57,7 @@ const MailServices = () => {
    
     <div className='slide-wrap'>
     <Swiper
-      slidesPerView={2}
+ 
       spaceBetween={20}
       navigation={false}
       

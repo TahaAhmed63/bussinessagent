@@ -113,10 +113,10 @@ in a piece of classical Latin literature from 45 BC.
     Mark Smith / Travel Enthusiast
     </h6>
 <div className='star-in-line d-flex mx-auto justify-content-center'>
-<img src={stars} className='img-fluid' alt='photos'/>
-<img src={stars} className='img-fluid' alt='photos'/>
-<img src={stars} className='img-fluid' alt='photos'/>
-<img src={stars} className='img-fluid' alt='photos'/>
+<img src={stars} className='img-fluid' alt='szsasa'/>
+<img src={stars} className='img-fluid' alt='szsasa'/>
+<img src={stars} className='img-fluid' alt='szsasa'/>
+<img src={stars} className='img-fluid' alt='szsasa'/>
 </div>
 
 <p className='slide-detail'>

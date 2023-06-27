@@ -10,6 +10,7 @@ const Registration = () => {
 <Navbar logo={mylogo}  linkcolor="#fff"/> 
 
 <BannerR/>
+
 <WhyUs/>
  
  </>

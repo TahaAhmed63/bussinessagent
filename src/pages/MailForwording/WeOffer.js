@@ -4,7 +4,7 @@ import offer1 from "../../assets/location 2.png"
 import offer2 from "../../assets/calendar 1.png"
 import offer3 from "../../assets/ticket 1.png"
 import owner1 from "../../assets/owner.png.png"
-//import owner2 from "../../Assets/owner2.png.png"
+// import owner2 from "../../Assets/owner2.png.png"
 const WeOffer = () => {
   return (
 <>

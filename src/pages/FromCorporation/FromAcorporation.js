@@ -9,7 +9,6 @@ import Section6 from './Section6'
 import Section7 from './section7'
 import Navbar from '../../MainComponent/Navbar'
 import logo from '../../assets/logoFooter.png'
-import Header from '../../components/Header'
 const FromAcorporation = () => {
   return (
     <div>
