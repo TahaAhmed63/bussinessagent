@@ -45,10 +45,10 @@ const Section6 = () => {
                 {
                     box_data?.map((val) => {
                         return (
-                            <div className='box py-4 my-2'>
-                                <img className='icon_color' src={val.image1} alt='icon5_1' />
-                                <p className='creative'>{val.title}</p>
-                                <p className='creative2'>{val.describtion}</p>
+                            <div className='boxs py-4 my-2'>
+                                <img className='icon_colors' src={val.image1} alt='icon5_1' />
+                                <p className='creatives'>{val.title}</p>
+                                <p className='creative2s'>{val.describtion}</p>
                             </div>
                         )
                     })

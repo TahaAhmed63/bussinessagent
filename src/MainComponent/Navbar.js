@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "./style.css";
 import {FaBars} from 'react-icons/fa'
-import {MdKeyboardArrowDown} from 'react-icons/md'
+import { MdKeyboardArrowDown } from "react-icons/md";
+
 
 const Navbar = (props) => {
   const { linkcolor, logo } = props;
@@ -49,7 +50,7 @@ const Navbar = (props) => {
                             <Link  style={linkStyle} to="/registration">Register Agent</Link>
                           </li>
                         </ul>
-                       <MdKeyboardArrowDown/>
+                       <MdKeyboardArrowDown />
                       </li>
                       <li>
                         <Link style={linkStyle} to="" className="dropdown-head">US Banking</Link>
@@ -94,7 +95,7 @@ const Navbar = (props) => {
                             <Link  style= {linkStyle} to="/ImportExport">Equipment Supplying</Link>
                           </li>
                           <li>
-                            <Link  style= {linkStyle}  to="sellproduct">Sell Product</Link>
+                            <Link  style= {linkStyle}  to="/sellproduct">Sell Product</Link>
                           </li>
                           <li>
                             <Link  style= {linkStyle} to="/equipment">Buy The Equipment</Link>

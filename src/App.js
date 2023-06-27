@@ -3,6 +3,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 // import StickyHeader from './components/Header'
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -13,7 +15,6 @@ import Llc from "./pages/formllc/Llc";
 import "./App.css";
 import FromAcorporation from "./pages/FromCorporation/FromAcorporation";
 import Virtualoffice from "./pages/VirtualOffice/virtualoffice";
-
 import ImportExport from "./pages/ImportExport/ImportExport";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MainPageMail from "./pages/MailForwording/MainPageMail";
@@ -22,6 +23,7 @@ import SellProduct from "./pages/SellProduct/SellProduct";
 import Registration from './pages/RegistrationAgent/Registration';
 import Buyfromus from "./pages/BuyFromUs/Buyfromus";
 import Heromain from "./pages/homeSection/Heromain";
+import EquipmentSourcing from "./pages/EquipmentSoucring/EquipmentSourcing";
 function App() {
   return (
     <>
@@ -40,6 +42,7 @@ function App() {
             <Route path="/registration" element={<Registration />} />
             <Route path="/Buyfromus" element={<Buyfromus />} />
 
+            <Route path="/equipment" element={<EquipmentSourcing />} />
           </Routes>
           <Footer />
         </BrowserRouter>
