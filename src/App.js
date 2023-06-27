@@ -21,7 +21,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MainPageMail from "./pages/MailForwording/MainPageMail";
 
 import logo from "./assets/Logo7.png";
-import Navbar from "./MainComponent/Navbar";
+
 import PhoneService from "./pages/PhoneServices/PhoneService";
 import SellProduct from "./pages/SellProduct/SellProduct";
 import Registration from './pages/RegistrationAgent/Registration';
@@ -30,7 +30,7 @@ function App() {
     <>
       <div className="App">
         <BrowserRouter>
-          <Navbar logo={logo} linkcolor="#000" />
+      
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/mailpage" element={<MainPageMail />} />
@@ -41,6 +41,8 @@ function App() {
             <Route path="/second" element={<Second />} />
             <Route path="/ImportExport" element={<ImportExport />} />
             <Route path="/sellproduct" element={<SellProduct />} />
+            <Route path="/registration" element={<Registration />} />
+
           </Routes>
           <Footer />
         </BrowserRouter>
