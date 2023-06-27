@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../../MainComponent/Navbar'
-import mylogo from "./../../assets/Logo7.png"
+import mylogo from "../../assets/Logo7.png"
 import MailBanner from './MailBanner'
 import MailServices from './MailServices'
 import RegistrationAgentServices from './RegistrationAgentServices'
