@@ -18,10 +18,10 @@ const Navbar = (props) => {
   };
 
   return (
-    <header>
-      <div className="header-area header-transparent">
+
+      <div className="header-transparent">
         <div className="main-header header-sticky">
-          <div className="container">
+          <div className="container bg-transparent">
             <div className="row align-items-center">
               <div className="col-xl-2 col-lg-2 col-md-2 ">
                 <div className="logo">
@@ -31,7 +31,7 @@ const Navbar = (props) => {
                 </div>
               </div>
               <div className="col-xl-10 col-lg-10 col-sm-10 col-md-10 hide-mb">
-                <div className="main-menu f-right d-lg-block">
+                <div className="main-menu d-lg-block">
                   <nav>
                     <ul id="navigation">
                       <li>
@@ -56,13 +56,13 @@ const Navbar = (props) => {
                         <Link style={linkStyle} to="" className="dropdown-head">US Banking</Link>
                         <ul className="submenu">
                           <li>
-                            <Link  style={linkStyle} to="blog.html">Blog</Link>
+                            <Link   to="blog.html">Blog</Link>
                           </li>
                           <li>
-                            <Link  style={linkStyle} to="blog_details.html">Blog Details</Link>
+                            <Link   to="blog_details.html">Blog Details</Link>
                           </li>
                           <li>
-                            <Link  style={linkStyle} to="elements.html">Elements</Link>
+                            <Link   to="elements.html">Elements</Link>
                           </li>
                         </ul>
                        <MdKeyboardArrowDown/>
@@ -71,28 +71,28 @@ const Navbar = (props) => {
                         <Link style={linkStyle} to="" className="dropdown-head">Business Tools</Link>
                         <ul className="submenu">
                           <li>
-                            <Link  style={linkStyle} to="blog.html">Blog</Link>
+                            <Link   to="blog.html">Blog</Link>
                           </li>
                           <li>
-                            <Link  style={linkStyle} to="blog_details.html">Blog Details</Link>
+                            <Link   to="blog_details.html">Blog Details</Link>
                           </li>
                           <li>
-                            <Link  style={linkStyle} to="elements.html">Elements</Link>
+                            <Link   to="elements.html">Elements</Link>
                           </li>
                         </ul>
                        <MdKeyboardArrowDown/>
                       </li>
                       <li>
-                        <Link  style={linkStyle} to="contact.html" className="dropdown-head">Other Services</Link>
+                        <Link style= {linkStyle}    to="contact.html" className="dropdown-head">Other Services</Link>
                         <ul className="submenu">
                           <li>
-                            <Link  style={linkStyle} to="blog.html">Blog</Link>
+                            <Link  to="blog.html">Blog</Link>
                           </li>
                           <li>
-                            <Link  style={linkStyle} to="blog_details.html">Blog Details</Link>
+                            <Link   to="blog_details.html">Blog Details</Link>
                           </li>
                           <li>
-                            <Link  style={linkStyle} to="elements.html">Elements</Link>
+                            <Link to="elements.html">Elements</Link>
                           </li>
                         </ul>
                        <MdKeyboardArrowDown/>
@@ -101,13 +101,13 @@ const Navbar = (props) => {
                         <Link  style={linkStyle} to="blog.html" className="dropdown-head">Go Offshare</Link>
                         <ul className="submenu">
                           <li>
-                            <Link  style={linkStyle} to="blog.html">Blog</Link>
+                            <Link to="blog.html">Blog</Link>
                           </li>
                           <li>
-                            <Link  style={linkStyle} to="blog_details.html">Blog Details</Link>
+                            <Link to="blog_details.html">Blog Details</Link>
                           </li>
                           <li>
-                            <Link  style={linkStyle} to="elements.html">Elements</Link>
+                            <Link to="elements.html">Elements</Link>
                           </li>
                         </ul>
                        <MdKeyboardArrowDown/>
@@ -149,7 +149,7 @@ const Navbar = (props) => {
                         <Link to="">Form A Us Company</Link>
                         <ul className="submenu">
                           <li>
-                            <Link to="blog.html">Blog</Link>
+                            <Link  to="blog.html">Blog</Link>
                           </li>
                           <li>
                             <Link to="blog_details.html">Blog Details</Link>
@@ -188,7 +188,7 @@ const Navbar = (props) => {
                         </ul>
                       </li>
                       <li>
-                        <Link to="">Other Services</Link>
+                        <Link style={linkStyle}  to="">Other Services</Link>
                         <ul className="submenu">
                           <li>
                             <Link to="blog.html">Blog</Link>
@@ -223,7 +223,7 @@ const Navbar = (props) => {
           </div>
         </div>
       </div>
-    </header>
+
     //call navbar
  //<Navbar logo={mylogo}  linkcolor="rgb(19 19 19 / 93%)"/> 
   );

@@ -19,7 +19,7 @@ const Section2 = () => {
           </button>
         </div>
         <div className="col-md-6 img-fluid">
-          <img src={img} alt="Photos" width={'100%'} height={'343.823px'} />
+         <img src={img} alt="Photos" width={'100%'} height={'343.823px'} />
         </div>
       </div>
     </div>
