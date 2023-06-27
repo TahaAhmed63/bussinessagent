@@ -11,19 +11,19 @@ const EquipmentSourcing = () => {
     return (
         <>
             <div
-                className="conatiner-fluid Equipment_img d-flex justify-content-center align-items-center"
+                className="conatiner-fluid Equipment_img"
                 style={{
-                    width: "100%"
+                    paddingTop:'150px'
                 }}
             >
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6">
-                            <h1 className='text-white'>Moscow</h1>
-                            <p >
+                        <div className="col-md-6 pading_equipment">
+                            <h1 className='text-white Moscow'>Moscow</h1>
+                            <p className='text-white'>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br /> Massa sem enim tellus vel molestie donec quis. Est <br /> maecenas ultrices magna nibh mi habitasse elementum nisi.
                             </p>
-                            <div className="btnBanner1">
+                            <div className="btnBanner1 text-white">
                                 More <img src={Icon} alt="Icon" />
                             </div>
                         </div>

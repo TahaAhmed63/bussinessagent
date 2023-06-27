@@ -14,17 +14,39 @@ font-weight: 700;
 line-height: 58px;
 letter-spacing: 0.5px;
 }
-.equip{
-color: #19B0FF;
-font-size: 14px;
-font-family: Poppins;
-font-weight: 600;
-line-height: 14px;
-}
+
 .faster{
     color: #292E37;
 font-size: 28px;
 font-family: Poppins;
 font-weight: 600;
 line-height: 28px;
+}
+
+.icon_width{
+    width:"10%"
+}
+@media (max-width: 768px) {
+    .about_us{
+        font-size: 18px;
+        font-weight: 500;
+    }  
+    .equip_p{
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 38px;
+    }
+    .faster{
+        font-size: 20px;
+        font-family: Poppins;
+        font-weight: 500;
+    }
+  }
+
+.equip{
+color: #19B0FF;
+font-size: 14px;
+font-family: Poppins;
+font-weight: 600;
+line-height: 14px;
 }

@@ -17,7 +17,7 @@ function App() {
    <>
    <div className='App'>
     <BrowserRouter>
-     <Navbar logo={logo}  linkcolor="#fff"/> 
+     <Navbar className="my-5" logo={logo}  linkcolor="#fff"/> 
        <Routes>
          <Route path='/' element={<Home/>}/>
          <Route path='/Corporation' element={<FromAcorporation/>}/>

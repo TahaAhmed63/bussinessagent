@@ -3,8 +3,8 @@ import "./Section3.css"
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { AiFillStar } from "react-icons/ai";
-import img1 from "../../assets/banner/arrow-left 1.png"
-import img2 from "../../assets/banner/arrow-left 2.png"
+// import img1 from "../../assets/banner/arrow-left 1.png"
+// import img2 from "../../assets/banner/arrow-left 2.png"
 import box_imag from "../../assets/banner/Rectangle 5.png"
 import box_imag1 from "../../assets/banner/Rectangle 7.png"
 import box_imag2 from "../../assets/banner/Rectangle 6.png"
@@ -32,15 +32,15 @@ const Section3 = () => {
     ]
     return (
         <div className='container'>
-            <div className='row'>
+            <div className='row d-flex justify-content-around align-items-center '>
                 <div className='col-md-6 equip_sec3'>
                     Explore top destination
                 </div>
                 <div className='col-md-6 d-flex justify-content-end'>
                     {/* <img style={{ width: '20%' }} src={img1} alt='img' /> */}
-                    <div className='btn btn-outline-primary equipment_btn me-3 d-flex justify-content-center align-items-center'>
+                    <button className='btn btn-outline-primary equipment_btn me-3 d-flex justify-content-center align-items-center'>
                         <FaArrowLeft className='equipment_icon' />
-                    </div>
+                    </button>
                     <button className='btn btn-primary equipment_btn d-flex justify-content-center align-items-center'>
                         <FaArrowRight className='equipment_icon' />
                     </button>

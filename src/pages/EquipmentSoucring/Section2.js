@@ -16,18 +16,18 @@ const Section2 = () => {
                     <p className='equip'>View all</p>
                 </div>
             </div>
-            <div className='d-flex justify-content-between flex-wrap my-5' >
-                <div style={{ width: "200px" }}>
-                    <img style={{ width: '40%' }} src={faster} alt='faster' />
-                    <span className='ms-3 faster'>Faster</span>
+            <div className='d-flex justify-content-between flex-wrap-md  my-5' >
+                <div className='d-flex align-items-center flex-wrap' style={{ width: "160px" }}>
+                    <img style={{ width: '70px' }} src={faster} alt='faster' />
+                    <span className='ms-2 faster'>Faster</span>
                 </div>
-                <div style={{ width: "200px" }}>
-                    <img style={{ width: '40%' }} src={cheaper} alt='faster' />
-                    <span className='ms-3 faster'>Cheaper</span>
+                <div className='d-flex align-items-center flex-wrap' style={{ width: "190px" }}>
+                    <img  style={{ width: '70px' }} src={cheaper} alt='faster' />
+                    <span className='ms-2 faster'>Cheaper</span>
                 </div>
-                <div style={{ width: "200px" }}>
-                    <img style={{ width: '40%' }} src={hand} alt='faster' />
-                    <span className='ms-3 faster'>At hand</span>
+                <div className='d-flex align-items-center flex-wrap' style={{ width: "180px" }}>
+                    <img style={{ width: '70px' }} src={hand} alt='faster' />
+                    <span className='ms-2 faster'>At hand</span>
                 </div>
             </div>
         </div>

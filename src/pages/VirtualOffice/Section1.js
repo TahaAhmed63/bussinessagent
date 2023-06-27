@@ -4,9 +4,10 @@ import "../VirtualOffice/virtualoffice.css"
 const Section1 = () => {
     return (
         <div
-            className="conatiner-fluid Fro_Img1 d-flex justify-content-center align-items-center"
+            className="conatiner-fluid Fro_Img1 "
             style={{
                 width: "100%",
+                paddingTop:"180px"
             }}
         >
             <div className="container">
@@ -16,7 +17,7 @@ const Section1 = () => {
                         <p className="p">
                             Launch your campaign and benefit from our expertise on designing and <br /> managing conversion centered bootstrap v5 html page.
                         </p>
-                        <button  className="btnBanner">
+                        <button  className="btnBanner mb-4">
                             Start Now
                         </button>
                     </div>

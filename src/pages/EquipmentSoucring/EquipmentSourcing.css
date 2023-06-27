@@ -5,26 +5,44 @@ flex-shrink: 0;
     background-image: url("../../assets/banner/equipment_bg.png");
     background-size: cover;
   }
+  .pading_equipment{
+    margin-top: 150px;
+  }
+  .Moscow{
+    font-size: 100px;
+  }
   @media (max-width: 1024px) {
     .Equipment_img {
         height: 543px;
+    }
+    .pading_equipment{
+      margin-top: 100px;
+    }
+    .Moscow{
+      font-size: 50px;
     }
   }
   @media (max-width: 768px) {
     .Equipment_img {
         height: 416px;
     }
+    .pading_equipment{
+      margin-top:-10px;
+    }
+    .Moscow{
+      font-size: 30px;
+    }
   }
-  @media (max-width: 425px) {
+  /* @media (max-width: 425px) {
     .Equipment_img {
         height: 225px;
     }
-  }
-  @media (max-width: 375px) {
+  } */
+  /* @media (max-width: 375px) {
     .Equipment_img {
         height: 200px;
     }
-  }
+  } */
   /* @media (max-width: 320px) {
     .Equipment_img {
         height: 150px;
