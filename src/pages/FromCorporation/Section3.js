@@ -1,5 +1,5 @@
 import React from "react";
-// import img from "../../assets/section3img.png";
+import img from "../../assets/section3img.png";
 const Section2 = () => {
   return (
     <div
@@ -8,7 +8,7 @@ const Section2 = () => {
     >
       <div className="row align-items-center">
         <div className="col-md-6 ">
-          {/* <img src={img} alt="Photos" width={"100%"} height={"326.52px"} /> */}
+          <img src={img} alt="Photos" width={"100%"} height={"326.52px"} />
         </div>
         <div className="col-md-6 ">
           <h1 style={{ fontSize: "32px",paddingLeft:'10px' }}>Quick and Easy Filing</h1>
