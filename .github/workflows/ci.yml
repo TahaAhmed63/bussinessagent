@@ -3,7 +3,7 @@ name: 🚀 Deploy on push main
 on: 
   push:
     branches:    
-      - main 
+      - dilawar 
 
 jobs:
   web-deploy:
