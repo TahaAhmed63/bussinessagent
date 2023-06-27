@@ -3,7 +3,7 @@ import React from "react";
 const Banner = () => {
   return (
     <div
-      className="conatiner-fluid FroImg d-flex justify-content-center align-items-center"
+      className="conatiner-fluid FroImgs d-flex justify-content-center align-items-center"
       style={{
         width: "100%",
       }}

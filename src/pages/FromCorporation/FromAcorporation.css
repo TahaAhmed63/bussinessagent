@@ -1,8 +1,8 @@
-.FroImg{
+.FroImgas{
     width: 1402.178px; 
     height: 751.572px;
     flex-shrink: 0;
-background-image: url("../../assets/banner/Banner3.png"); 
+    background-image: url("../../assets/banner/Banner3.png"); 
     background-repeat: no-repeat;
     background-size: 100% 100%;
     /* background-size: cover; */

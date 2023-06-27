@@ -1,0 +1,17 @@
+.FroImgass{
+    width: 1402.178px; 
+    height: 751.572px;
+    flex-shrink: 0;
+    background-image: url("../../assets/banner/BuyfromusBanner.png"); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* background-size: cover; */
+}
+.FroSectionbg{
+    width: 1402.178px; 
+    height: 751.572px;
+    flex-shrink: 0;
+    background-image: url("../../assets/buySection5.png"); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}

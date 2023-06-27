@@ -14,17 +14,14 @@ import Llc from "./pages/formllc/Llc";
 import "./App.css";
 import FromAcorporation from "./pages/FromCorporation/FromAcorporation";
 import Virtualoffice from "./pages/VirtualOffice/virtualoffice";
-import Second from "./pages/FromCorporation/Second";
 
 import ImportExport from "./pages/ImportExport/ImportExport";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MainPageMail from "./pages/MailForwording/MainPageMail";
-
-import logo from "./assets/Logo7.png";
-
 import PhoneService from "./pages/PhoneServices/PhoneService";
 import SellProduct from "./pages/SellProduct/SellProduct";
 import Registration from './pages/RegistrationAgent/Registration';
+import Buyfromus from "./pages/BuyFromUs/Buyfromus";
 function App() {
   return (
     <>
@@ -38,10 +35,10 @@ function App() {
             <Route path="/Llc" element={<Llc />} />
             <Route path="/corporation" element={<FromAcorporation />} />
             <Route path="/virtualoffice" element={<Virtualoffice />} />
-            <Route path="/second" element={<Second />} />
             <Route path="/ImportExport" element={<ImportExport />} />
             <Route path="/sellproduct" element={<SellProduct />} />
             <Route path="/registration" element={<Registration />} />
+            <Route path="/Buyfromus" element={<Buyfromus />} />
 
           </Routes>
           <Footer />

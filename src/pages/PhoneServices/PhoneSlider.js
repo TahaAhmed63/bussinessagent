@@ -74,8 +74,8 @@ Trust our clients
     Mark Smith / Travel Enthusiast
     </h6>
 <div className='star-in-line d-flex mx-auto justify-content-center'>
-<img src={stars} className='img-fluid'/>
-<img src={stars} className='img-fluid'/>
+<img src={stars} className='img-fluid' />
+<img src={stars} className='img-fluid' />
 <img src={stars} className='img-fluid'/>
 <img src={stars} className='img-fluid'/>
 </div>
