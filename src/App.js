@@ -1,5 +1,4 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Home from "./pages/Home";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -22,6 +21,7 @@ import PhoneService from "./pages/PhoneServices/PhoneService";
 import SellProduct from "./pages/SellProduct/SellProduct";
 import Registration from './pages/RegistrationAgent/Registration';
 import Buyfromus from "./pages/BuyFromUs/Buyfromus";
+import Heromain from "./pages/homeSection/Heromain";
 function App() {
   return (
     <>
@@ -29,7 +29,7 @@ function App() {
         <BrowserRouter>
       
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Heromain />} />
             <Route path="/mailpage" element={<MainPageMail />} />
             <Route path="/phoneServices" element={<PhoneService />} />
             <Route path="/Llc" element={<Llc />} />

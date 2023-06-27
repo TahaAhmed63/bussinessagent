@@ -54,7 +54,7 @@
 
 .sectiones1 {
     top: 500px;
-    left: 150px;
+    left: 200px;
     position: absolute;
     display: inline-flex;
 }
@@ -63,7 +63,7 @@
     outline: 1px solid #FFFFFF;
 }
 
-.box {
+.boxsss {
     /* width: 170px; */
     height: 200px;
     border-radius: 10px;
@@ -96,7 +96,7 @@
         font-size: 9px !important;
         font-weight: 700;
     }
-    .box {
+    .boxsss {
         margin-top: 10px;
     }
     .pera2{
@@ -122,12 +122,12 @@
     .tiltes {
         letter-spacing: 0px !important;
     }
-    .box {
+    .boxsss {
         margin-top: 10px;
         height: 180px;
     }
     .box3 {
-        margin-top: 940px;
+        margin-top: 847px;
         width: 358.571411px !important;
         left: 57.478516px !important;
         height: 380px !important;
@@ -138,9 +138,18 @@
     .pera2{
         font-size: 13px !important;
     }
+    .heading2 {
+        font-size: 24px !important;
+    }
     .heading1 {
         font-family: Inter;
         font-size: 25px;
+    }
+    .heading3 {
+        font-size: 24px !important;
+    }
+    .Section31 {
+        margin-top: 100px !important;
     }
     .pera1 {
         font-family: Inter;
@@ -154,12 +163,48 @@
         margin-top: 100px;
     }
 }
-.box:hover {
+@media (max-width:375px){
+    .box3 {
+        margin-top: 917px !important;
+        width: 329.571411px !important;
+        left: 36.478516px !important;
+        height: 352px !important;
+    }
+    .sectiones1 {
+        left: 0px;
+        height: auto;
+        width: 81px !important;
+    }
+    .tiltes {
+        font-size: 7px !important;
+        font-weight: 700 !important;
+    }
+}
+@media (max-width:320px){
+    .box3 {
+        margin-top: 1166px !important;
+        width: 284.571411px !important;
+        left: 36.478516px !important;
+        height: 291px !important;
+    }
+    .boxsss {
+       margin-left: 3px;
+    }
+    .sectiones1{
+        left: -2px !important;
+    }
+    .Section31 {
+        margin-top: 33px !important;
+    }
+    .box3 {
+        display: none;
+    }
+}
+.boxsss:hover {
     background: linear-gradient(127.99deg, #232D86 12.43%, #611D9E 84.94%),
         linear-gradient(0deg, #FFFFFF, #FFFFFF);
     outline: 1px solid white;
     color: white;
-    width: 180px;
 
 }
 
